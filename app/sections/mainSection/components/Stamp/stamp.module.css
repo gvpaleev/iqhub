@@ -1,0 +1,61 @@
+.item {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  align-content: center;
+
+  justify-content: center;
+  gap: 15px;
+  /* margin-top: -100px; */
+}
+
+.item h1 {
+  margin: 0px;
+  font-family: "Antipasto Pro";
+  font-weight: 400;
+  font-size: 113px;
+}
+
+.item h1 span {
+
+  line-height: 0%;
+  font-family: "Gunny Rewritten";
+  font-size: 149px;
+}
+
+.item h1:nth-of-type(1) {
+  padding-left: 95px;
+}
+
+
+.item h1:nth-of-type(1) span {
+  position: relative;
+  color: var(--subtlePurple);
+
+}
+
+
+.item h1:nth-of-type(1) span::before {
+  content: "";
+  display: inline-block;
+  width: 193px;
+  height: 25px;
+  background-image: url('/purpleVector.svg');
+  position: absolute;
+  bottom: 25px;
+}
+
+.item h1:nth-of-type(2) span {
+  color: var(--delicateOrange);
+  position: relative;
+
+}
+
+.item h1:nth-of-type(2) span::before {
+  content: "";
+  display: inline-block;
+  width: 333px;
+  height: 18px;
+  background-image: url('/orangeVector.svg');
+  position: absolute;
+  bottom: 25px;
+}
