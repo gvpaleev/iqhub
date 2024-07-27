@@ -66,7 +66,7 @@
   content: "";
   display: inline-block;
   width: 212px;
-  height: 204px;
+  height: 172px;
   background-image: url('/brain.svg');
   position: absolute;
   background-size: cover;
@@ -81,15 +81,11 @@
 .item h1:nth-of-type(1)::after {
   content: "";
   display: inline-block;
-  width: 194px;
-  height: 418px;
+  width: 301px;
+  height: 611px;
   background-image: url('/neuron.svg');
   position: absolute;
-  /* background-size: cover; */
-  /* Масштабирует изображение по размеру псевдоэлемента */
-  background-repeat: no-repeat;
-  /* Запрещает повторение фона */
-  background-position: center;
-  bottom: -200px;
-  right: -200px;
+  bottom: -300px;
+  right: -320px;
+  transform: scale(0.8);
 }
