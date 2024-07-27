@@ -1,0 +1,10 @@
+.item {
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+}
+
+.logo {
+  padding-top: 16px;
+  padding-left: 100px;
+  ;
+}

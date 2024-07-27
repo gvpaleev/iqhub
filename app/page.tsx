@@ -1,5 +1,8 @@
+import { MainSection } from "./sections/mainSection/ui";
 
 export default function Home() {
-  return (
-    <p>hello world</p>);
+  return (<>
+
+    <MainSection />
+  </>);
 }

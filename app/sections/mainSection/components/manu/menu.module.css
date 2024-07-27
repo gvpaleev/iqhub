@@ -1,0 +1,17 @@
+.item {
+  padding-top: 27px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+
+  justify-content: center;
+  gap: 68px;
+}
+
+.a {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 30px;
+  font-family: "Antipasto Pro";
+  font-weight: 400;
+  color: black;
+}

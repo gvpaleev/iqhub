@@ -1,0 +1,6 @@
+.item {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  padding-right: 60px;
+  padding-top: 12px;
+}

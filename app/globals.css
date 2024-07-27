@@ -1,0 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/antipasto-pro');
+
+:root {
+  --gentlyWhite: #F8F7F2;
+
+
+
+}
+
+body {
+  margin: 0px;
+  background-color: var(--gentlyWhite);
+}
+
+section {
+  height: 100vh;
+}
