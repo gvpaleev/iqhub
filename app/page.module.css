@@ -1,19 +1,1 @@
-.neuronsLeft {
-  position: absolute;
-  left: -230px;
-  top: -165px;
-  /* clip-path: inset(0 0 0 0); */
-}
 
-.neuronsRight {
-  position: absolute;
-  right: -380px;
-  top: -55px;
-  /* clip-path: inset(0 0 0 0); */
-}
-
-.logsFont {
-  position: absolute;
-
-  z-index: 50;
-}

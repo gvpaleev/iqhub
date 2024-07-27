@@ -1,8 +1,9 @@
 .item {
   display: grid;
+  position: relative;
   grid-template-rows: repeat(2, min-content);
   align-content: center;
-
+  align-self: end;
   justify-content: center;
   gap: 15px;
   /* margin-top: -100px; */
@@ -24,6 +25,7 @@
 
 .item h1:nth-of-type(1) {
   padding-left: 95px;
+  position: relative;
 }
 
 
@@ -58,4 +60,36 @@
   background-image: url('/orangeVector.svg');
   position: absolute;
   bottom: 25px;
+}
+
+.item h1:nth-of-type(1)::before {
+  content: "";
+  display: inline-block;
+  width: 212px;
+  height: 204px;
+  background-image: url('/brain.svg');
+  position: absolute;
+  background-size: cover;
+  /* Масштабирует изображение по размеру псевдоэлемента */
+  background-repeat: no-repeat;
+  /* Запрещает повторение фона */
+  background-position: center;
+  bottom: 0px;
+  left: -200px;
+}
+
+.item h1:nth-of-type(1)::after {
+  content: "";
+  display: inline-block;
+  width: 194px;
+  height: 418px;
+  background-image: url('/neuron.svg');
+  position: absolute;
+  /* background-size: cover; */
+  /* Масштабирует изображение по размеру псевдоэлемента */
+  background-repeat: no-repeat;
+  /* Запрещает повторение фона */
+  background-position: center;
+  bottom: -200px;
+  right: -200px;
 }
