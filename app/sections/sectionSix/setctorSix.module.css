@@ -1,0 +1,13 @@
+.item {
+  display: grid;
+  grid-template-rows: 251px auto;
+
+}
+
+.item h1 {
+  display: inline-block;
+}
+
+.item p {
+  display: inline-block;
+}

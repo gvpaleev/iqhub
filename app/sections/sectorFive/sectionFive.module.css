@@ -1,0 +1,98 @@
+.item {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.item div {
+  display: grid;
+  grid-template-rows: 195px 95px 105px 77px 198px;
+  grid-template-columns: 1720px;
+  border-radius: 40px;
+  align-content: center;
+  justify-content: center;
+  align-items: end;
+  justify-items: center;
+  ;
+
+  background: #D7C0F5;
+}
+
+.item div h1 {
+  font-family: "Antipasto Pro";
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 450;
+  display: inline-block;
+  margin: 0px;
+}
+
+.item div h1 span {
+  font-family: "Gunny Rewritten";
+  font-size: 96.894px;
+}
+
+.item div h4 {
+  display: inline-block;
+  max-width: 724px;
+  margin: 0px;
+  font-family: "Antipasto Pro";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.item div p {
+  display: inline-block;
+  margin: 0px;
+  font-family: "Antipasto Pro";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 6px;
+}
+
+
+
+.item div div {
+  align-self: start;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: min-content min-content;
+  width: 652px;
+  height: 79px;
+  border-radius: 60px;
+  background: #F8F7F2;
+  justify-content: end;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.item div div button {
+  width: 231px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  background: #FE6F5F;
+  border: none;
+  color: #FFF;
+
+  font-family: "Antipasto Pro";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 11px;
+}
+
+.item div div input {
+  background: #F8F7F2;
+
+  width: 350px;
+  height: 40px;
+  border: none;
+  /* Убираем стандартную рамку */
+  border-bottom: 1px solid #000;
+  /* Добавляем линию снизу */
+  outline: none;
+}
