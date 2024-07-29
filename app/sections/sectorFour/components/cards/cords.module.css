@@ -1,0 +1,123 @@
+.item {
+  display: grid;
+  gap: 77px;
+}
+
+.item div {
+  border-radius: 40px;
+  padding-left: 222px;
+  width: 1720px -222px;
+  height: 500px;
+  align-content: center;
+  display: grid;
+  gap: 40px;
+
+
+}
+
+.item div ul {
+  list-style-type: none;
+  /* Убирает стандартные маркеры списка */
+  padding-left: 0;
+}
+
+.item div ul li {
+  position: relative;
+  padding-left: 20px;
+  color: #2C2640;
+
+  font-family: "Antipasto Pro";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.item div ul li::before {
+  content: "-";
+  /* Символ дефиса */
+  position: absolute;
+  left: 0;
+  /* Выравнивание по левому краю */
+  top: 0;
+}
+
+.item div h1 {
+  margin: 0px;
+  color: #2C2640;
+
+  font-family: "Antipasto Pro";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.item div button {
+  position: relative;
+  padding-right: 50px;
+  width: 317px;
+  height: 65.089px;
+  border-radius: 51.967px;
+  border: 1px solid #6C4CDC;
+  color: #6C4CDC;
+
+  text-align: center;
+  font-family: "Antipasto Pro";
+  font-size: 27.716px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.item div button::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url('/afterButtonIcon2.svg');
+  background-size: contain;
+  /* Растягивает изображение по всей площади */
+  background-position: center;
+  /* Центрирует изображение */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+}
+
+.item>div:nth-of-type(1) {
+
+  background: #fff;
+
+}
+
+.item>div:nth-of-type(2) {
+
+  background: #FCDCD5;
+  ;
+
+}
+
+.item>div:nth-of-type(3) {
+
+  background: #F9A69C;
+
+}
+
+.item>div:nth-of-type(4) {
+
+  background: #D7C0F5;
+
+}
+
+.item>div:nth-of-type(5) {
+
+  background: #B39FF6;
+
+}
+
+.item>div:nth-of-type(6) {
+
+  background: #FFF;
+
+}

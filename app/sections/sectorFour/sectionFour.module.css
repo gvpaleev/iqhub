@@ -1,0 +1,15 @@
+.item {
+  display: grid;
+  grid-template-rows: 400px auto;
+  justify-content: center;
+}
+
+.item>h1 {
+  color: #6C4CDC;
+
+  text-align: center;
+  font-family: "Antipasto Pro";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
+}

@@ -25,44 +25,84 @@
 
 /* Карточка  */
 .item div {
+  position: relative;
   display: grid;
   grid-template-rows: 70px auto auto 102px;
-  display: inline-block;
+  /* display: inline-block; */
   min-width: 415px;
   height: 668px;
   border-radius: 40px;
   background: #FFF;
+  z-index: 0
 }
 
+.item div::after {
+  content: "";
+  display: inline-block;
+  width: 280px;
+  height: 590px;
+  background-image: url('/snake.svg');
+  position: absolute;
+  background-size: contain;
+  /* Масштабирует изображение по размеру псевдоэлемента */
+  background-repeat: no-repeat;
+  /* Запрещает повторение фона */
+  background-position: center;
+  /* bottom: 0px; */
+  right: -50px;
+  top: 38px;
+  z-index: 10;
+}
+
+
 .item div h1 {
-  padding: 16px;
+  color: #2C2640;
+
+  font-family: "Antipasto Pro";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 76%;
+  grid-row: 2;
+  padding: 32px;
 
   white-space: normal;
   /* Разрешает перенос текста, если по умолчанию установлен nowrap */
   overflow-wrap: break-word;
+  z-index: 20;
 }
 
 .item div p {
-  padding: 16px;
+  grid-row: 3;
+  align-content: end;
+  padding: 32px;
+  color: #2C2640;
+
+  font-family: "Antipasto Pro";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
 
 
   white-space: normal;
   /* Разрешает перенос текста, если по умолчанию установлен nowrap */
   overflow-wrap: break-word;
+  z-index: 20;
 }
 
 .item::before {
   content: "";
   display: inline-block;
-  width: 260px;
+  width: 290px;
   height: 272px;
-  background-image: url('/brain2.svg');
+  background-image: url('/brain3.svg');
   position: absolute;
-  background-size: cover;
+  background-size: contain;
   /* Масштабирует изображение по размеру псевдоэлемента */
   background-repeat: no-repeat;
   /* Запрещает повторение фона */
   background-position: center;
   bottom: 50px;
   left: 300px;
+  z-index: 10;
 }
