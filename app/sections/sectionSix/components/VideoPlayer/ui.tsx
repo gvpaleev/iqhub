@@ -2,16 +2,16 @@
 "use client";
 import React from "react";
 import ReactPlayer from "react-player";
-
-const VideoPlayer = () => {
+import styles from './videoPlayer.module.css'
+function VideoPlayer() {
        //video path
        let videosrc = "/iqHubVidoe.mp4";
 
        return (
-              <>
+              <div className={styles.item}>
                      <ReactPlayer
-                            width="500px"
-                            height="400px"
+                            width="1000px"
+                            height="560px"
                             url={videosrc}
                             controls={true}
                             // light is usefull incase of dark mode
@@ -20,7 +20,7 @@ const VideoPlayer = () => {
                             pip={true}
                      />
                      {/* <source src={videosrc} type="video/mp4" /> */}
-              </>
+              </div>
        );
 };
 
