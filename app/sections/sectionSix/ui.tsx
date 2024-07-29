@@ -7,14 +7,14 @@ export function SectionSix() {
 
   return (
     <section className={styles.item}>
-      <div>
-        <h1>Как проходят наши занятия</h1>
-        <div><p>Как проходят наши занятия</p></div>
-      </div>
-      <div>
-        <VideoPlayer />
-        <p>Как проходят наши занятия</p>
-      </div>
+      <h1>Как проходят наши занятия</h1>
+      <p>
+        Интерактивная доска для занятий
+      </p>
+      <VideoPlayer />
+      <p>
+        Видеочат с педагогом
+      </p>
     </section>
   )
 }

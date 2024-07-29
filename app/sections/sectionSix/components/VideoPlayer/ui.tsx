@@ -19,7 +19,7 @@ const VideoPlayer = () => {
                             // picture in picture
                             pip={true}
                      />
-                     <source src={videosrc} type="video/mp4" />
+                     {/* <source src={videosrc} type="video/mp4" /> */}
               </>
        );
 };

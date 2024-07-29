@@ -13,8 +13,8 @@ export default function Home() {
     {/* <MainSection /> */}
     {/* <SectionTwo /> */}
     {/* <SectionThree /> */}
-    <SectionFour />
+    {/* <SectionFour /> */}
     {/* <SectionFive /> */}
-    {/* <SectionSix /> */}
+    <SectionSix />
   </>);
 }

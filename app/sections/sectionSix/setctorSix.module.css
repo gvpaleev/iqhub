@@ -1,12 +1,17 @@
 .item {
   display: grid;
-  grid-template-rows: 251px auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: 226px auto;
 
 }
 
 .item h1 {
+  align-content: end;
+  margin: 0px;
+  padding-left: 100px;
   display: inline-block;
   color: #6C4CDC;
+  width: 626px;
 
   font-family: "Antipasto Pro";
   font-size: 75px;
@@ -14,6 +19,46 @@
   font-weight: 400;
 }
 
+
 .item p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  height: 80px;
+  margin: 0px;
+  border-radius: 14.756px;
+  background: #FCDCD5;
+  color: #000;
+  padding-left: 75px;
+  padding-right: 45px;
+  font-family: "Antipasto Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+
+}
+
+.item p::before {
+  content: "";
   display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('/purpleBall.svg');
+  background-size: contain;
+  /* Растягивает изображение по всей площади */
+  background-position: center;
+  /* Центрирует изображение */
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: -20px; */
+  left: 20px;
+  top: 13px;
+  /* right: 7px; */
+  /* transform: translateY(-50%); */
+}
+
+.item p::nth-of-type(1) {
+  align-content: end;
+
 }
