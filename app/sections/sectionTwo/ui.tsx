@@ -7,8 +7,8 @@ export function SectionTwo() {
 
   return (
     <section className={styles.item}>
+      <h1>Интересные факты о нас</h1>
       <Cards />
-      <div>dasasd</div>
     </section>
   )
 }

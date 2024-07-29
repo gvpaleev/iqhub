@@ -9,7 +9,7 @@ export function SectionSix() {
     <section className={styles.item}>
       <div>
         <h1>Как проходят наши занятия</h1>
-        <p>Как проходят наши занятия</p>
+        <div><p>Как проходят наши занятия</p></div>
       </div>
       <div>
         <VideoPlayer />

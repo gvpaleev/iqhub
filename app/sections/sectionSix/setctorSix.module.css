@@ -6,6 +6,12 @@
 
 .item h1 {
   display: inline-block;
+  color: #6C4CDC;
+
+  font-family: "Antipasto Pro";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .item p {

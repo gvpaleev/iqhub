@@ -1,5 +1,6 @@
 .item {
   display: flex;
+  position: relative;
   /* Используем Flexbox */
   overflow-x: hidden;
   /* Скрываем содержимое за пределами контейнера по горизонтали */
@@ -9,12 +10,25 @@
   /* Устанавливаем ширину контейнера */
   gap: 20px;
   padding-left: 535px;
+  overflow-x: auto;
+  height: 668px;
+  width: 100pw;
+  overflow-y: hidden;
+  /* verflow-x: hidden; */
 }
 
-.item div {
+.item::-webkit-scrollbar {
+  width: 0;
+}
 
+
+
+/* Карточка  */
+.item div {
+  display: grid;
+  grid-template-rows: 70px auto auto 102px;
   display: inline-block;
-  width: 415px;
+  min-width: 415px;
   height: 668px;
   border-radius: 40px;
   background: #FFF;
@@ -35,4 +49,20 @@
   white-space: normal;
   /* Разрешает перенос текста, если по умолчанию установлен nowrap */
   overflow-wrap: break-word;
+}
+
+.item::before {
+  content: "";
+  display: inline-block;
+  width: 260px;
+  height: 272px;
+  background-image: url('/brain2.svg');
+  position: absolute;
+  background-size: cover;
+  /* Масштабирует изображение по размеру псевдоэлемента */
+  background-repeat: no-repeat;
+  /* Запрещает повторение фона */
+  background-position: center;
+  bottom: 50px;
+  left: 300px;
 }

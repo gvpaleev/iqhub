@@ -67,7 +67,7 @@
   display: inline-block;
   width: 212px;
   height: 172px;
-  background-image: url('/brain.svg');
+  background-image: url('/brain1.svg');
   position: absolute;
   background-size: cover;
   /* Масштабирует изображение по размеру псевдоэлемента */
