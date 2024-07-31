@@ -1,0 +1,17 @@
+.item {
+  display: grid;
+  /* grid-template-rows: 200px auto; */
+  justify-items: center;
+  /* align-content: center; */
+}
+
+.item>h1 {
+  padding-left: 100px;
+  color: #6C4CDC;
+  line-height: 76%;
+  width: 435px;
+  font-family: "Antipasto Pro";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
+}

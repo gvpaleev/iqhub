@@ -7,6 +7,8 @@ import { SectionThree } from "./sections/sectionThree/ui";
 import { SectionFour } from "./sections/sectorFour/ui";
 import { SectionFive } from "./sections/sectorFive/ui";
 import { SectionSix } from "./sections/sectionSix/ui";
+import { SectionSeven } from "./sections/sectorSeven/ui";
+import { SectionEight } from "./sections/sectorEigh/ui";
 export default function Home() {
   return (<>
 
@@ -15,6 +17,9 @@ export default function Home() {
     {/* <SectionThree /> */}
     {/* <SectionFour /> */}
     {/* <SectionFive /> */}
-    <SectionSix />
+
+    {/* <SectionSix /> */}
+    {/* <SectionSeven /> */}
+    <SectionEight />
   </>);
 }
