@@ -12,14 +12,13 @@ import { SectionEight } from "./sections/sectorEigh/ui";
 export default function Home() {
   return (<>
 
-    {/* <MainSection /> */}
-    {/* <SectionTwo /> */}
-    {/* <SectionThree /> */}
-    {/* <SectionFour /> */}
-    {/* <SectionFive /> */}
-
-    {/* <SectionSix /> */}
-    {/* <SectionSeven /> */}
+    <MainSection />
+    <SectionTwo />
+    <SectionThree />
+    <SectionFour />
+    <SectionFive />
+    <SectionSix />
+    <SectionSeven />
     <SectionEight />
   </>);
 }

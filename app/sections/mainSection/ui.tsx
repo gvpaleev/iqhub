@@ -12,7 +12,6 @@ export function MainSection() {
 
       <Stamp />
       <h2 >Онлайн занятия для дошкольников</h2>
-      {/* Фон нейронов  */}
       {/* <Image src='/neuronsLeft.svg' alt="neuronsLeft" width={1250} height={950} className={classNames(styles.neuronsLeft, styles.logsFont)} /> */}
       {/* <Image src='/neuronsRight.svg' alt="neuronsLeft" width={1250} height={950} className={classNames(styles.neuronsRight, styles.logsFont)} /> */}
       <button>записаться</button>
