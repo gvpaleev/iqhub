@@ -9,6 +9,10 @@ export function SectionTwo() {
     <section className={styles.item}>
       <h1>Интересные факты о нас</h1>
       <Cards />
+      <div>
+        <button />
+        <button />
+      </div>
     </section>
   )
 }

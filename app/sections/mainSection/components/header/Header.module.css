@@ -4,7 +4,7 @@
   /* align-content: center; */
 }
 
-.logo {
+.item:nth-child(1) {
   padding-top: 16px;
   padding-left: 100px;
 

@@ -1,6 +1,6 @@
 .item {
   display: grid;
-  grid-template-rows: 200px auto;
+  grid-template-rows: 200px auto auto;
   /* justify-content: center; */
   /* align-content: center; */
 }
@@ -14,4 +14,47 @@
   font-size: 75px;
   font-style: normal;
   font-weight: 400;
+}
+
+.item>h1::before {
+  content: "";
+  display: inline-block;
+  width: 950px;
+  height: 1250px;
+  background-image: url('/neuronsTwoLeft.svg');
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -500px;
+  /* top: -550px; */
+  z-index: -1;
+}
+
+.item div:nth-of-type(2) {
+  align-self: start;
+  justify-self: end;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: min-content min-content;
+}
+
+.item div button:nth-of-type(1) {
+  width: 58px;
+  height: 58px;
+  background-image: url('/buttonLeft.svg');
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+}
+
+.item div button:nth-of-type(2) {
+  padding-right: 150px;
+  width: 58px;
+  height: 58px;
+  background-image: url('/buttonRigth.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
 }

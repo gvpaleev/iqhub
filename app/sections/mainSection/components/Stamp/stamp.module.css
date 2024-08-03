@@ -2,7 +2,6 @@
   display: grid;
   position: relative;
   grid-template-rows: repeat(2, min-content);
-  align-content: center;
   align-self: end;
   justify-content: center;
   gap: 15px;
@@ -14,9 +13,13 @@
   font-family: "Antipasto Pro";
   font-weight: 400;
   font-size: 113px;
+  position: relative;
+
 }
 
+
 .item h1 span {
+  position: relative;
 
   line-height: 0%;
   font-family: "Gunny Rewritten";
@@ -25,41 +28,6 @@
 
 .item h1:nth-of-type(1) {
   padding-left: 95px;
-  position: relative;
-}
-
-
-.item h1:nth-of-type(1) span {
-  position: relative;
-  color: var(--subtlePurple);
-
-}
-
-
-.item h1:nth-of-type(1) span::before {
-  content: "";
-  display: inline-block;
-  width: 193px;
-  height: 25px;
-  background-image: url('/purpleVector.svg');
-  position: absolute;
-  bottom: 25px;
-}
-
-.item h1:nth-of-type(2) span {
-  color: var(--delicateOrange);
-  position: relative;
-
-}
-
-.item h1:nth-of-type(2) span::before {
-  content: "";
-  display: inline-block;
-  width: 333px;
-  height: 18px;
-  background-image: url('/orangeVector.svg');
-  position: absolute;
-  bottom: 25px;
 }
 
 .item h1:nth-of-type(1)::before {
@@ -69,13 +37,25 @@
   height: 172px;
   background-image: url('/brain1.svg');
   position: absolute;
-  background-size: cover;
-  /* Масштабирует изображение по размеру псевдоэлемента */
-  background-repeat: no-repeat;
-  /* Запрещает повторение фона */
+  background-size: contain;
   background-position: center;
-  bottom: 0px;
+  background-repeat: no-repeat;
   left: -200px;
+}
+
+.item h1:nth-of-type(2)::before {
+  content: "";
+  display: inline-block;
+  width: 950px;
+  height: 1250px;
+  background-image: url('/neuronsLeft.svg');
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -700px;
+  top: -550px;
+  z-index: -1;
 }
 
 .item h1:nth-of-type(1)::after {
@@ -84,8 +64,93 @@
   width: 301px;
   height: 611px;
   background-image: url('/neuron.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
-  bottom: -300px;
-  right: -320px;
-  transform: scale(0.8);
+  bottom: -370px;
 }
+
+.item h1:nth-of-type(2)::after {
+  content: "";
+  display: inline-block;
+  width: 950px;
+  height: 1250px;
+  background-image: url('/neuronsRight.svg');
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -600px;
+  right: -700px;
+  z-index: -1;
+}
+
+.item h1:nth-of-type(1) span {
+  color: var(--subtlePurple);
+}
+
+
+.item h1:nth-of-type(1) span::before {
+  content: "";
+  display: inline-block;
+  width: 193px;
+  height: 25px;
+  background-image: url('/purpleVector.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 25px;
+}
+
+.item h1:nth-of-type(2) span {
+  color: var(--delicateOrange);
+}
+
+.item h1:nth-of-type(2) span::before {
+  content: "";
+  display: inline-block;
+  width: 333px;
+  height: 18px;
+  background-image: url('/orangeVector.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 25px;
+}
+
+/* .item:nth-of-type(1) { */
+/*   position: relative; */
+/* } */
+
+/* .item:nth-child(1)::before { */
+/*   content: ""; */
+/*   display: inline-block; */
+/*   width: 212px; */
+/*   height: 172px; */
+/*   background-image: url('/brain1.svg'); */
+/*   position: absolute; */
+/*   background-size: contain; */
+/*   background-position: center; */
+/*   background-repeat: no-repeat; */
+/*   /* bottom: 0px; */
+/*   /* left: 0px; */
+/* } */
+/**/
+/* .item:nth-of-type(1)::after { */
+/*   content: ""; */
+/*   display: inline-block; */
+/*   width: 301px; */
+/*   height: 611px; */
+/*   background-image: url('/neuron.svg'); */
+/*   background-size: contain; */
+/*   background-position: center; */
+/*   background-repeat: no-repeat; */
+/*   position: absolute; */
+/*   /* bottom: 0px; */
+/*   /* right: 0px; */
+/*   transform: scale(0.8); */
+/* } */
