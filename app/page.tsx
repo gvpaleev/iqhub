@@ -12,8 +12,8 @@ import { SectionEight } from "./sections/sectorEigh/ui";
 export default function Home() {
   return (<>
 
-    {/* <MainSection /> */}
-    {/* <SectionTwo /> */}
+    <MainSection />
+    <SectionTwo />
     <SectionThree />
     <SectionFour />
     <SectionFive />

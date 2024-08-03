@@ -5,6 +5,7 @@
 }
 
 .item div {
+  position: relative;
   display: grid;
   grid-template-rows: 195px 95px 105px 77px 198px;
   grid-template-columns: 1720px;
@@ -13,9 +14,43 @@
   justify-content: center;
   align-items: end;
   justify-items: center;
-  ;
+  z-index: 0;
+  overflow: hidden;
 
   background: #D7C0F5;
+}
+
+.item>div:nth-of-type(1)::before {
+  content: "";
+  display: inline-block;
+  width: 950px;
+  height: 1250px;
+  background-image: url('/neuronsThreeLeft.svg');
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -120px;
+  /* top:  50px; */
+  z-index: -10;
+}
+
+
+.item>div::after {
+  content: "";
+  display: inline-block;
+  width: 950px;
+  height: 810px;
+  background-image: url('/neuronsThreeRight.svg');
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* left: -120px; */
+  /* top:  50px; */
+  right: 0px;
+  bottom: 0px;
+  z-index: -10;
 }
 
 .item div h1 {
@@ -28,9 +63,45 @@
 }
 
 .item div h1 span {
+  position: relative;
   font-family: "Gunny Rewritten";
   font-size: 96.894px;
 }
+
+.item div h1:nth-of-type(1) span {
+  color: #6C4CDC;
+}
+
+.item div h1:nth-of-type(1) span::before {
+  content: "";
+  display: inline-block;
+  width: 400px;
+  height: 19px;
+  background-image: url('/purpleVectorTwo.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 15px;
+}
+
+.item div h1:nth-of-type(2) span {
+  color: #FE6F5F;
+}
+
+.item div h1:nth-of-type(2) span::before {
+  content: "";
+  display: inline-block;
+  width: 322px;
+  height: 17px;
+  background-image: url('/orangeVectorTwo.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 15px;
+}
+
 
 .item div h4 {
   display: inline-block;
@@ -55,6 +126,8 @@
 
 
 .item div div {
+  /* position: absolute; */
+
   align-self: start;
   display: grid;
   grid-template-rows: min-content;
@@ -67,6 +140,8 @@
   align-content: center;
   align-items: center;
   gap: 15px;
+  z-index: 10;
+  position: relative;
 }
 
 .item div div button {
