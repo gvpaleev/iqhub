@@ -1,15 +1,36 @@
 .item {
   display: grid;
   grid-template-rows: 400px auto;
+
   justify-content: center;
+  overflow-y: hidden;
+  /* align-items: center; */
 }
 
 .item>h1 {
   color: #6C4CDC;
-
+  padding-top: 115px;
+  margin: 0px;
+  position: relative;
+  justify-self: center;
   text-align: center;
   font-family: "Antipasto Pro";
   font-size: 75px;
   font-style: normal;
   font-weight: 400;
+}
+
+.item>h1::before {
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  background-image: url('/neuronFour.svg');
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: -300px;
+  top: 35px;
+
 }
