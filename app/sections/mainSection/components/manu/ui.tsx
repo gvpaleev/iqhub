@@ -8,3 +8,13 @@ export function Menu() {
     <a href="#"  >Контакты</a>
   </div >)
 }
+
+
+<nav>
+  <ul>
+    <li><a href="#home">Программы</a></li>
+    <li><a href="#about">Стоимость</a></li>
+    <li><a href="#services">О нас</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+</nav>
