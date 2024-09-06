@@ -1,0 +1,388 @@
+@media (min-width: 769px) {
+  .item {
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+
+
+  .item>div {
+    display: grid;
+    grid-template-rows: 195px 85px 85px 77px 198px;
+    grid-template-columns: 40vw 40vw;
+    grid-template-areas: "word1 word2"
+      "word3 word3"
+      "word4 word4"
+      "word5 word5"
+      "input input";
+    border-radius: 40px;
+    align-content: center;
+    justify-content: center;
+    align-items: end;
+    justify-items: center;
+
+    position: relative;
+    overflow: hidden;
+    background: #F36757;
+    ;
+    z-index: 0;
+  }
+
+  .brain1 {
+    position: absolute;
+    left: -350px;
+    bottom: -100px;
+    z-index: -10;
+  }
+
+  .brain2 {
+    position: absolute;
+    top: -200px;
+    z-index: -20;
+
+  }
+
+  .brain3 {
+    position: absolute;
+    right: -350px;
+    bottom: -250px;
+    z-index: -10;
+
+  }
+
+  .brain4 {
+    position: absolute;
+    bottom: -550px;
+    left: 100px;
+    z-index: -15;
+  }
+
+  .word1 {
+    font-family: "Antipasto Pro";
+    grid-area: word1;
+    justify-self: end;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 450;
+    display: inline-block;
+    margin: 0px;
+    color: #fff;
+  }
+
+  .word2 {
+    justify-self: start;
+
+    grid-area: word2;
+    font-family: "Gunny Rewritten";
+    font-size: 96.894px;
+    color:
+      #6C4CDC;
+    position: relative;
+  }
+
+  .word2>img {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+  }
+
+  .word3 {
+    grid-area: word3;
+    font-family: "Antipasto Pro";
+
+    display: inline-block;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 450;
+    display: inline-block;
+    margin: 0px;
+    color: #fff;
+
+  }
+
+  .word4 {
+    grid-area: word4;
+    display: inline-block;
+    margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 6px;
+    color: #fff;
+
+
+  }
+
+  .word5 {
+    grid-area: word5;
+    display: inline-block;
+    margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 6px;
+    color: #fff;
+
+
+  }
+
+
+
+  .button {
+    grid-area: input;
+    align-self: start;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content;
+    width: 652px;
+    height: 79px;
+    border-radius: 60px;
+    background: #F8F7F2;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .button button {
+    width: 231px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #FE6F5F;
+    border: none;
+    color: #FFF;
+
+    font-family: "Antipasto Pro";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 11px;
+  }
+
+  .button input {
+    background: #F8F7F2;
+    width: 350px;
+    height: 40px;
+    border: none;
+    /* Убираем стандартную рамку */
+    border-bottom: 1px solid #000;
+    /* Добавляем линию снизу */
+    outline: none;
+  }
+
+  .button input::placeholder {
+    color: rgba(44, 38, 64, 0.50);
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 18px */
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+
+
+  .item>div {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 20vh 6vh 15vh 17vh 20vh;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas: "word1 word2"
+      "word3 word3"
+      "word4 word4"
+      "word5 word5"
+      "input input";
+    border-radius: 40px;
+    align-content: center;
+    justify-content: center;
+    align-items: end;
+    justify-items: center;
+
+    position: relative;
+    overflow: hidden;
+    background: #F36757;
+    ;
+    z-index: 0;
+  }
+
+  .brain1 {
+    position: absolute;
+    left: -350px;
+    bottom: -100px;
+    z-index: -10;
+    scale: 0.5;
+  }
+
+  .brain2 {
+    scale: 0.5;
+
+    position: absolute;
+    top: -200px;
+    z-index: -20;
+
+  }
+
+  .brain3 {
+    position: absolute;
+    scale: 0.5;
+
+    right: -350px;
+    bottom: -250px;
+    z-index: -10;
+
+  }
+
+  .brain4 {
+    position: absolute;
+    scale: 0.5;
+
+    bottom: -550px;
+    left: 100px;
+    z-index: -15;
+  }
+
+  .word1 {
+    font-family: "Antipasto Pro";
+    grid-area: word1;
+    justify-self: end;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 450;
+    display: inline-block;
+    margin: 0px;
+    color: #fff;
+  }
+
+  .word2 {
+    justify-self: start;
+
+    grid-area: word2;
+    font-family: "Gunny Rewritten";
+    font-size: 39px;
+    color:
+      #6C4CDC;
+    position: relative;
+  }
+
+  .word2>img {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 15vw;
+  }
+
+  .word3 {
+    grid-area: word3;
+    font-family: "Antipasto Pro";
+    display: inline-block;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 450;
+    display: inline-block;
+    margin: 0px;
+    color: #fff;
+
+  }
+
+  .word4 {
+
+    padding: 0 15vw;
+    text-align: center;
+    grid-area: word4;
+    display: inline-block;
+    margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 6px;
+    color: #fff;
+
+
+  }
+
+  .word5 {
+    grid-area: word5;
+    display: inline-block;
+    margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 6px;
+    color: #fff;
+
+
+  }
+
+
+
+  .button {
+    grid-area: input;
+    align-self: start;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content;
+    width: 70vw;
+    height: 13vw;
+    border-radius: 60px;
+    background: #F8F7F2;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .button button {
+    width: 30vw;
+    height: 10vw;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #6C4CDC;
+    border: none;
+    color: #FFF;
+
+    font-family: "Antipasto Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 11px;
+  }
+
+  .button input {
+    background: #F8F7F2;
+    width: 25vw;
+    height: 10vw;
+    border: none;
+    /* Убираем стандартную рамку */
+    border-bottom: 1px solid #000;
+    /* Добавляем линию снизу */
+    outline: none;
+  }
+
+  .button input::placeholder {
+    color: rgba(44, 38, 64, 0.50);
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 18px */
+  }
+}

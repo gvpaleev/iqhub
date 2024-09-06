@@ -1,0 +1,442 @@
+@media (min-width: 769px) {
+  .item {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 60px 380px 90px 94px 125px;
+    grid-template-areas: "icon menu href"
+      "stamp stamp stamp"
+      "stamp3 stamp3 stamp3"
+      "button button button"
+    ;
+
+    align-items: end;
+    position: relative;
+    z-index: 0;
+  }
+
+  /* Левая нейронкаоо  */
+  .neuronsLeft {
+    position: absolute;
+    opacity: 0.4;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    /* width: 75%; */
+    /* transform: scale(min(1, calc(100vw / 1920))); */
+  }
+
+  /* Правая нейронкаоо  */
+  .neuronsRigth {
+    opacity: 0.4;
+
+    /* width: 100%; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -10;
+    /* transform: scale(min(1, calc(100vw / 1920))); */
+  }
+
+  .stamp {
+    justify-self: center;
+    grid-area: stamp;
+    /* display: absolute; */
+  }
+
+  .iconMenu {
+    display: none;
+  }
+
+  .iconIqHub {
+    justify-self: start;
+    grid-area: icon;
+    padding-left: 44px;
+  }
+
+  .menu {
+    justify-self: center;
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: min-content;
+    justify-content: center;
+    gap: 68px;
+
+  }
+
+  .hrefIcons {
+    justify-self: end;
+    grid-area: href;
+    padding-right: 60px;
+  }
+
+  /* Ссылки меню  */
+  .menu>a {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 30px;
+    font-family: "Antipasto Pro";
+    font-weight: 400;
+    color: black;
+  }
+
+  .h2Line {
+    color: #2C2640;
+    margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 45px;
+    font-weight: 400;
+    justify-self: center;
+    grid-area: stamp3;
+  }
+
+  .button {
+    grid-area: button;
+
+    justify-self: center;
+
+  }
+
+
+  .buttonForHaver {
+
+    position: relative;
+    width: 366px;
+    height: 75px;
+    border-radius: 60px;
+    background: var(--subtlePurple);
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    padding-right: 70px;
+  }
+
+  .buttonForHaver::after {
+    content: "";
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background-image: url('/1/buttonAfter.svg');
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+
+  .formForSend {
+    border: 1px solid #6C4CDC;
+    align-self: start;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content;
+    width: 652px;
+    height: 79px;
+    border-radius: 60px;
+    background: #F8F7F2;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .formForSend button {
+    width: 231px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #6C4CDC;
+    border: none;
+    color: #FFF;
+
+    font-family: "Antipasto Pro";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 11px;
+  }
+
+  .formForSend input {
+    background: #F8F7F2;
+
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+  }
+
+}
+
+/* Мобилка */
+@media (max-width: 768px) {
+  .item {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 60px 340px 90px 94px 125px;
+    grid-template-areas: "icon icoMen"
+      "stamp stamp"
+      "stamp3 stamp3"
+      "button button"
+    ;
+
+    align-items: end;
+    position: relative;
+    z-index: 0;
+  }
+
+  /* Левая нейронкаоо  */
+  .neuronsLeft {
+    /* position: absolute; */
+    /* opacity: 0.4; */
+    display: none;
+    /* scale: 0.1; */
+    /* top: 0px; */
+    /* left: 0px; */
+    /* z-index: -10; */
+    /* width: 75%; */
+    /* transform: scale(min(1, calc(100vw / 1920))); */
+  }
+
+  /* Правая нейронкаоо  */
+  .neuronsRigth {
+    /* opacity: 0.4; */
+
+    display: none;
+    /* scale: 0.1; */
+    /* width: 100%; */
+    /* position: absolute; */
+    /* top: 0px; */
+    /* right: 0px; */
+    /* z-index: -10; */
+    /* transform: scale(min(1, calc(100vw / 1920))); */
+  }
+
+  .stamp {
+    justify-self: center;
+    grid-area: stamp;
+    /* display: absolute; */
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .h2Line {
+    color: #2C2640;
+    margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-weight: 400;
+    justify-self: center;
+    grid-area: stamp3;
+  }
+
+  .hrefIcons {
+    display: none;
+  }
+
+
+  .iconMenu {
+    justify-self: end;
+    grid-area: icoMen;
+    padding-bottom: 10px;
+    padding-right: 30px;
+  }
+
+  .iconIqHub {
+    justify-self: start;
+    grid-area: icon;
+    padding-left: 44px;
+  }
+
+  .button {
+    grid-area: button;
+
+    justify-self: center;
+
+  }
+
+
+  .buttonForHaver {
+
+    position: relative;
+    width: 366px;
+    height: 75px;
+    border-radius: 60px;
+    background: var(--subtlePurple);
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    padding-right: 70px;
+  }
+
+  .buttonForHaver::after {
+    content: "";
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    background-image: url('/1/buttonAfter.svg');
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+
+  .formForSend {
+    border: 1px solid #6C4CDC;
+    align-self: start;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content;
+    width: 352px;
+    height: 49px;
+    border-radius: 60px;
+    background: #F8F7F2;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .formForSend button {
+    width: 131px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #6C4CDC;
+    border: none;
+    color: #FFF;
+
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 11px;
+  }
+
+  .formForSend input {
+    background: #F8F7F2;
+
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+  }
+
+}
+
+
+
+
+
+
+
+/* Мозг */
+/* .item>img:nth-of-type(3) { */
+/*   position: absolute; */
+/*   top: 280px; */
+/*   width: 180px; */
+/*   left: 450px; */
+/*   z-index: -10; */
+/* } */
+/**/
+/* /* Нейрон  */
+/* .item>img:nth-of-type(4) { */
+/*   position: absolute; */
+/*   top: 200px; */
+/*   width: 180px; */
+/*   right: 400px; */
+/*   z-index: -10; */
+/* } */
+
+/* Иконка IqHub */
+
+
+/* Меню  */
+
+
+/* Иконки сылок с право  */
+
+
+/* Первая строка штампа  */
+/* .item>h1:nth-of-type(1) { */
+/**/
+/*   justify-self: center; */
+/*   grid-area: stamp1; */
+/*   position: relative; */
+/* } */
+
+/* Вторая строка штампа  */
+/* .item>h1:nth-of-type(2) { */
+/*   justify-self: center; */
+/*   grid-area: stamp2; */
+/*   position: relative; */
+/* } */
+
+/* Третья строка штампа  */
+
+
+/* Кнопка */
+
+/* .item h1 { */
+/*   margin: 0px; */
+/*   font-family: "Antipasto Pro"; */
+/*   font-weight: 400; */
+/*   font-size: 90px; */
+/*   color: #2C2640; */
+/* } */
+/**/
+/* .item h1 span { */
+/*   line-height: 0%; */
+/*   font-family: "Gunny Rewritten"; */
+/*   font-size: 134px; */
+/* } */
+/**/
+/* .item>h1:nth-of-type(1) { */
+/*   padding-left: 150px; */
+/* } */
+/**/
+/* .item>h1:nth-of-type(2) { */
+/*   margin-left: -60px; */
+/* } */
+/**/
+/* .item>h1:nth-of-type(1) span { */
+/*   padding: 35px; */
+/*   display: inline-block; */
+/*   color: var(--subtlePurple); */
+/*   position: relative; */
+/* } */
+/**/
+/* .item>h1:nth-of-type(1) span>img { */
+/*   position: absolute; */
+/*   left: 35px; */
+/*   bottom: -30px; */
+/* } */
+/**/
+/* .item>h1:nth-of-type(2) span { */
+/*   display: inline-block; */
+/*   padding-left: 35px; */
+/*   color: var(--delicateOrange); */
+/*   position: relative; */
+/* } */
+/**/
+/* .item>h1:nth-of-type(2) span>img { */
+/*   position: absolute; */
+/*   left: 35px; */
+/*   bottom: -65px; */
+/* } */
+/**/
+.item h2 {}

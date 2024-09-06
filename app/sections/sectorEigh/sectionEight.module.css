@@ -1,0 +1,153 @@
+.item {
+  display: grid;
+  justify-items: center;
+  gap: 25px;
+  grid-template-rows: 150px min-content min-content min-content min-content;
+  /* align-content: center; */
+  position: relative;
+}
+
+.item>footer {
+  position: absolute;
+  background: #6C4CDC;
+  height: 223px;
+  width: 100%;
+  bottom: 0px;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 200px auto 300px;
+
+}
+
+.item>footer>img:nth-of-type(1) {
+
+  position: absolute;
+
+  z-index: -10;
+  bottom: 0px;
+}
+
+.item>footer>img:nth-of-type(2) {
+  padding-left: 100px;
+  padding-top: 15px;
+}
+
+.item>footer>nav {
+  justify-self: end;
+  display: flex;
+  gap: 80px;
+  padding-right: 100px;
+  padding-top: 23px;
+
+  /* flex-wrap: nowrap; */
+}
+
+.item>footer>nav>a {
+  text-decoration: none;
+  color: #FFF;
+
+  text-align: center;
+  font-family: "Antipasto Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.item>footer>div {
+  display: grid;
+  grid-template-rows: 60px 35px 25px 70px;
+  align-items: end;
+  ;
+  justify-items: start;
+  ;
+  /* width: 800px; */
+}
+
+.item>footer>div>h1 {
+  color: #FFF;
+  margin: 0px;
+
+  text-align: center;
+  font-family: "Antipasto Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.item>footer>div>h4 {
+  color: #FFF;
+
+  margin: 0px;
+  text-align: center;
+  font-family: "Antipasto Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.item>footer>img:nth-of-type(1) {
+  padding-left: 100px;
+  padding-top: 15px;
+}
+
+.item>img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.item>h1 {
+  /* padding-left: 100px; */
+  color: #6C4CDC;
+  line-height: 76%;
+  /* width: 435px; */
+  font-family: "Antipasto Pro";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.item>div {
+  width: 1285px;
+  border-radius: 30px;
+  background: #FFF;
+  /* display: grid; */
+  /* align-self: ; */
+  /* align-content: center; */
+  position: relative;
+
+}
+
+.item>div>img {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  transform-origin: center;
+}
+
+.item>div>h1 {
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #2C2640;
+  margin: 0px;
+
+  padding-left: 55px;
+  font-family: "Antipasto Pro";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.item>div>div {
+  /* display: inline-block; */
+  padding-left: 55px;
+  /* padding-bottom: 35px; */
+  color: #000;
+  width: 1000px;
+  font-family: "Antipasto Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}

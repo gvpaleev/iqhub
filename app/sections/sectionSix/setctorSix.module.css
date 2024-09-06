@@ -1,0 +1,305 @@
+@media (min-width: 769px) {
+
+  .item {
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    grid-template-rows: 226px auto;
+    position: relative;
+  }
+
+  .neuronus {
+    position: absolute;
+    /* opacity: 0.4; */
+    top: 0px;
+    right: 0px;
+    z-index: -10;
+  }
+
+  .header {
+    align-self: end;
+    margin: 0px;
+    padding-left: 100px;
+    display: inline-block;
+    color: #6C4CDC;
+    width: 626px;
+
+    font-family: "Antipasto Pro";
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .board {
+    display: grid;
+    grid-template-rows: min-content;
+    /* align-self: center; */
+    /* justify-content: center; */
+    /* align-content: center; */
+    justify-self: center;
+    width: 1000px;
+    height: 560px;
+    align-self: start;
+    /* background-color: lightblue; */
+    /* Для визуального представления */
+    position: relative;
+    z-index: 0;
+  }
+
+  .board::after {
+    content: "";
+    display: inline-block;
+    width: 332px;
+    height: 400px;
+    background-image: url('/6/neuron.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -50px;
+    transform: translateX(-50%);
+    bottom: -112px;
+  }
+
+  .board::before {
+    content: "";
+    display: inline-block;
+    width: 232px;
+    height: 112px;
+    background-image: url('/playerLegs.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -112px;
+
+  }
+
+  .pTop {
+    position: absolute;
+    width: 190px;
+    height: 80px;
+
+    display: flex;
+    margin: -40px;
+    border-radius: 14.756px;
+    background: #FCDCD5;
+    color: #000;
+    z-index: 10;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    padding-left: 75px;
+    padding-right: 45px;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pLeft {
+    position: absolute;
+    width: 190px;
+    height: 80px;
+    display: flex;
+    margin-right: -140px;
+    border-radius: 14.756px;
+    background: #FCDCD5;
+    color: #000;
+    z-index: 10;
+    right: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    padding-left: 75px;
+    padding-right: 45px;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .pLeft::before {
+    top: 14px;
+    left: 40px;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 28px;
+    /* margin-left: -46px; */
+    height: 28px;
+    background-image: url('/purpleBall.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* margin-top: -18px; */
+
+  }
+
+  .pTop::before {
+    top: 14px;
+    left: 40px;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 28px;
+    /* margin-left: -46px; */
+    height: 28px;
+    background-image: url('/purpleBall.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .item {
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    grid-template-rows: 226px auto;
+    position: relative;
+  }
+
+  .neuronus {
+    display: none;
+    /* position: absolute; */
+    /* top: 0px; */
+    /* right: 0px; */
+    /* z-index: -10; */
+  }
+
+  .header {
+    align-self: end;
+    margin: 0px;
+    padding-left: 100px;
+    display: inline-block;
+    color: #6C4CDC;
+    width: 626px;
+
+    font-family: "Antipasto Pro";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .board {
+    background: red;
+    ;
+    display: grid;
+    width: 100vw;
+    height: 48vw;
+    /* grid-template-rows: min-content; */
+    justify-self: center;
+    align-self: start;
+    position: relative;
+    z-index: 0;
+  }
+
+  .board::after {
+    /* content: ""; */
+    /* display: inline-block; */
+    /* width: 332px; */
+    /* height: 400px; */
+    /* background-image: url('/6/neuron.svg'); */
+    /* background-size: contain; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* position: absolute; */
+    /* left: -50px; */
+    /* transform: translateX(-50%); */
+    /* bottom: -112px; */
+  }
+
+  .board::before {
+    /* content: ""; */
+    /* display: inline-block; */
+    /* width: 232px; */
+    /* height: 112px; */
+    /* background-image: url('/playerLegs.svg'); */
+    /* background-size: contain; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* bottom: -112px; */
+
+  }
+
+  .pTop {
+    display: none;
+    /* position: absolute; */
+    /* width: 190px; */
+    /* height: 80px; */
+    /**/
+    /* display: flex; */
+    /* margin: -40px; */
+    /* border-radius: 14.756px; */
+    /* background: #FCDCD5; */
+    /* color: #000; */
+    /* z-index: 10; */
+    /* font-family: "Antipasto Pro"; */
+    /* font-size: 24px; */
+    /* font-style: normal; */
+    /* font-weight: 300; */
+    /* padding-left: 75px; */
+    /* padding-right: 45px; */
+    /* align-items: center; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+  }
+
+  .pLeft {
+    display: none;
+    /* position: absolute; */
+    /* width: 190px; */
+    /* height: 80px; */
+    /* display: flex; */
+    /* margin-right: -140px; */
+    /* border-radius: 14.756px; */
+    /* background: #FCDCD5; */
+    /* color: #000; */
+    /* z-index: 10; */
+    /* right: 0px; */
+    /* font-family: "Antipasto Pro"; */
+    /* font-size: 24px; */
+    /* font-style: normal; */
+    /* font-weight: 300; */
+    /* padding-left: 75px; */
+    /* padding-right: 45px; */
+    /* align-items: center; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+  }
+
+  .pLeft::before {
+    /* top: 14px; */
+    /* left: 40px; */
+    /* content: ""; */
+    /* position: absolute; */
+    /* display: inline-block; */
+    /* right: 0px; */
+    /* width: 28px; */
+    /* height: 28px; */
+    /* background-image: url('/purpleBall.svg'); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+
+  }
+
+  .pTop::before {
+    /* top: 14px; */
+    /* left: 40px; */
+    /* content: ""; */
+    /* position: absolute; */
+    /* display: inline-block; */
+    /* right: 0px; */
+    /* width: 28px; */
+    /* height: 28px; */
+    /* background-image: url('/purpleBall.svg'); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+  }
+}

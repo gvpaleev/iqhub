@@ -1,0 +1,391 @@
+@media (min-width: 769px) {
+
+  .item {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 300px auto;
+
+    grid-template-areas: "neuron header brain"
+      "body body body";
+    justify-content: center;
+    overflow-y: hidden;
+    /* align-items: center; */
+    z-index: 0
+  }
+
+  /* .item>div:nth-of-type(1) { */
+  /*   display: flex; */
+  /*   justify-content: center; */
+  /*   position: relative; */
+  /* } */
+  .cardsBlock {
+    grid-area: body;
+    z-index: 10;
+    margin-top: -200px;
+    padding-top: 200px;
+    display: grid;
+    /* grid-template-columns: min-content; */
+    justify-items: center;
+    gap: 77px;
+    width: 99vw;
+    scrollbar-width: none;
+    overflow-y: scroll;
+  }
+
+  .card {
+    position: sticky;
+    top: 0px;
+    /* padding-top: 10px; */
+    background: #fff;
+    border-radius: 40px;
+    padding-left: 220px;
+    /* margin-left: 222px; */
+    width: 1500px;
+    height: 500px;
+    align-content: center;
+    display: grid;
+    gap: 40px;
+  }
+
+  .card>img {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: -10;
+  }
+
+
+  .card ul {
+    list-style-type: none;
+    /* Убирает стандартные маркеры списка */
+    padding-left: 0;
+  }
+
+  .card ul li {
+    position: relative;
+    padding-left: 20px;
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+
+  .card ul li::before {
+    content: "-";
+    /* Символ дефиса */
+    position: absolute;
+    left: 0;
+    /* Выравнивание по левому краю */
+    top: 0;
+  }
+
+  .card h1 {
+    margin: 0px;
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .card button {
+    position: relative;
+    padding-right: 50px;
+    width: 317px;
+    height: 65.089px;
+    border-radius: 51.967px;
+    border: 1px solid #6C4CDC;
+    color: #6C4CDC;
+
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 27.716px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: transparent;
+  }
+
+
+
+  .card:nth-of-type(2) {
+    background: #FCDCD5;
+    top: 25px;
+
+  }
+
+  /* .item>div:nth-of-type(2):has(div:nth-of-type(2).sticky) div:nth-of-type(2) { */
+  /*   transform: scale(0.9); */
+  /*   opacity: 0.8; */
+  /* } */
+
+  /**/
+  /* .item>div:nth-of-type(2) div:nth-of-type(2).sticky { */
+  /*   width: 1400px; */
+  /* } */
+
+  .card:nth-of-type(3) {
+    top: 50px;
+    background: #F9A69C;
+
+
+  }
+
+  .card:nth-of-type(4) {
+    top: 70px;
+
+    background: #D7C0F5;
+
+  }
+
+  .card:nth-of-type(5) {
+    top: 95px;
+    background: #B39FF6;
+    /* padding-bottom: 100px; */
+    ;
+  }
+
+  .card:nth-of-type(6) {
+
+    /* top: 195px; */
+    padding-bottom: 40px;
+  }
+
+
+
+
+
+  .neuron {
+    left: 300px;
+    grid-area: neuron;
+    height: 300px;
+    bottom: 0px;
+    justify-self: end;
+    align-self: end;
+  }
+
+  .brain {
+    transform: scaleX(-1);
+    align-self: end;
+    right: 300px;
+    grid-area: brain;
+    bottom: 0px;
+    width: 160px;
+  }
+
+  .header {
+    align-self: end;
+    padding-bottom: 80px;
+    grid-area: header;
+    color: #6C4CDC;
+    /* padding-top: 175px; */
+    margin: 0px;
+    position: relative;
+    justify-self: center;
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 30vh auto;
+
+    grid-template-areas: "neuron header brain"
+      "body body body";
+    justify-content: center;
+    overflow-y: hidden;
+    /* align-items: center; */
+    z-index: 0
+  }
+
+  /* .item>div:nth-of-type(1) { */
+  /*   display: flex; */
+  /*   justify-content: center; */
+  /*   position: relative; */
+  /* } */
+  .cardsBlock {
+    grid-area: body;
+    z-index: 10;
+    display: grid;
+    justify-items: center;
+    gap: 77px;
+    /* width: 99vw; */
+    scrollbar-width: none;
+    overflow-y: scroll;
+  }
+
+  .card {
+    position: sticky;
+    top: 0px;
+    /* padding-top: 10px; */
+    background: #fff;
+    border-radius: 40px;
+    padding-left: 10vw;
+    /* margin-left: 222px; */
+    width: 80vw;
+    height: 60vh;
+    align-content: center;
+    display: grid;
+    gap: 40px;
+  }
+
+  .card>img {
+    position: absolute;
+    width: 30vw;
+    right: 10vw;
+    top: 50px;
+    z-index: -10;
+  }
+
+
+  .card ul {
+    list-style-type: none;
+    /* Убирает стандартные маркеры списка */
+    padding-left: 0;
+  }
+
+  .card ul li {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 30px;
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+
+  .card ul li::before {
+    content: "-";
+    /* Символ дефиса */
+    position: absolute;
+    left: 0;
+    /* Выравнивание по левому краю */
+    top: 0;
+  }
+
+  .card h1 {
+    margin: 0px;
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .card button {
+    position: relative;
+    padding-right: 50px;
+    width: 70vw;
+    height: 65.089px;
+    border-radius: 51.967px;
+    border: 1px solid #6C4CDC;
+    color: #6C4CDC;
+
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 27.716px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: transparent;
+  }
+
+
+
+  .card:nth-of-type(2) {
+    background: #FCDCD5;
+    top: 5px;
+
+  }
+
+  /* .item>div:nth-of-type(2):has(div:nth-of-type(2).sticky) div:nth-of-type(2) { */
+  /*   transform: scale(0.9); */
+  /*   opacity: 0.8; */
+  /* } */
+
+  /**/
+  /* .item>div:nth-of-type(2) div:nth-of-type(2).sticky { */
+  /*   width: 1400px; */
+  /* } */
+
+  .card:nth-of-type(3) {
+    top: 10px;
+    background: #F9A69C;
+
+
+  }
+
+  .card:nth-of-type(4) {
+    top: 15px;
+
+    background: #D7C0F5;
+
+  }
+
+  .card:nth-of-type(5) {
+    top: 20px;
+    background: #B39FF6;
+    /* padding-bottom: 100px; */
+    ;
+  }
+
+  .card:nth-of-type(6) {
+
+    top: 25px;
+    /* top: 195px; */
+    padding-bottom: 40px;
+  }
+
+
+
+
+
+  .neuron {
+    left: 300px;
+    grid-area: neuron;
+    bottom: 0px;
+    justify-self: end;
+    align-self: end;
+    width: 20vw;
+
+  }
+
+  .brain {
+    transform: scaleX(-1);
+    align-self: end;
+    right: 300px;
+    grid-area: brain;
+    bottom: 0px;
+    width: 20vw;
+  }
+
+  .header {
+    align-self: end;
+    padding-bottom: 80px;
+    grid-area: header;
+    color: #6C4CDC;
+    /* padding-top: 175px; */
+    margin: 0px;
+    position: relative;
+    justify-self: center;
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+
+  }
+}
