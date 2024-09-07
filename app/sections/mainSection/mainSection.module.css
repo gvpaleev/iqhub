@@ -14,6 +14,11 @@
     z-index: 0;
   }
 
+  .menuMobil {
+
+    display: none;
+  }
+
   /* Левая нейронкаоо  */
   .neuronsLeft {
     position: absolute;
@@ -189,6 +194,55 @@
     position: relative;
     z-index: 0;
   }
+
+  .menuMobil {
+    display: grid;
+    grid-template-rows: 30% 10% 10% 10% auto;
+    margin: 0px;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    border-radius: 30px;
+    background: #6C4CDC;
+
+    z-index: 100;
+    justify-content: center;
+  }
+
+  .menuMobil>a {
+    align-self: end;
+    z-index: 200;
+    text-decoration: none;
+    color: #FFF;
+    text-justify: center;
+    text-align: center;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .closeMenu {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  .iconIqHubWhite {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+  }
+
+  .neuronsMenuMobil {
+    position: absolute;
+    top: 1vh;
+    right: 0px;
+  }
+
+
+
 
   /* Левая нейронкаоо  */
   .neuronsLeft {

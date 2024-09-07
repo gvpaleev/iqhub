@@ -82,17 +82,86 @@ export function SectionSeven() {
     }
   }, [itemMenu]);
 
+  const handleScrollToCenter = (index) => {
+    const container = document.querySelector(`.${styles.bar}`);
+    const selectedItem = container.querySelectorAll('h1')[index];
+
+    if (container && selectedItem) {
+      const containerWidth = container.clientWidth;
+      const selectedItemWidth = selectedItem.clientWidth;
+      const selectedItemLeft = selectedItem.offsetLeft;
+
+      // Вычисляем позицию для прокрутки, чтобы элемент оказался по центру
+      const scrollPosition =
+        selectedItemLeft - (containerWidth - selectedItemWidth) / 2;
+
+      // Плавная прокрутка
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+  const [scrollInitialized, setScrollInitialized] = useState(false);
+  useEffect(() => {
+    const container = document.querySelector(`.${styles.cardsBlock}`);
+
+    if (container) {
+      const cards = container.querySelectorAll(`.${styles.card}`);
+      const containerWidth = container.clientWidth;
+
+      const middleIndex = Math.floor(cards.length / 2);
+      const totalWidthBeforeMiddle = Array.from(cards)
+        .slice(0, middleIndex)
+        .reduce((acc, card) => acc + card.clientWidth + parseFloat(getComputedStyle(card).marginRight), 0);
+
+      const middleCardWidth = cards[middleIndex].clientWidth;
+      const scrollPosition = totalWidthBeforeMiddle - (containerWidth - middleCardWidth) / 2;
+
+      // Плавная прокрутка с помощью requestAnimationFrame
+      const startScroll = container.scrollLeft;
+      const targetScroll = Math.max(scrollPosition, 0);
+      const duration = 500; // Длительность анимации в миллисекундах
+      const startTime = performance.now();
+
+      const animateScroll = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeInOut = progress < 0.5
+          ? 2 * progress * progress
+          : -1 + (4 - 2 * progress) * progress;
+
+        container.scrollLeft = startScroll + (targetScroll - startScroll) * easeInOut;
+
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+
+      requestAnimationFrame(animateScroll);
+    }
+    if (!scrollInitialized && data.length > 2) {
+      handleScrollToCenter(2); // Прокрутить к третьему элементу
+      setItemMenu(2); // Установить активный элемент как третий
+      setScrollInitialized(true); // Устанавливаем флаг, чтобы больше не прокручивалось автоматически
+    }
+  }, []);
 
 
+
+  // let isMobil = +(window.innerWidth) < 768;
   return (
     <section className={styles.item}>
-      <h1>Стоимость</h1>
+      <h1 className={styles.header}>Стоимость</h1>
+
       <motion.nav
+        className={styles.bar}
       >
+
         <motion.div
           className={styles.backgroundItemMenu}
           style={{
-            width: itemMenu !== null ? `${activeItemWidth}px` : '0%',
+            width: itemMenu !== null ? `${activeItemWidth * 0.8}px` : '0%',
             left: itemMenu !== null ? `${itemMenuRefs.current[itemMenu]?.offsetLeft}px` : '0%'
           }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}

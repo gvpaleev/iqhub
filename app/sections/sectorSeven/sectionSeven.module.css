@@ -1,359 +1,759 @@
-.item {
-  display: grid;
-  grid-template-rows: 221px 64px auto;
-  justify-content: center;
+@media (min-width: 769px) {
+
+  .item {
+    display: grid;
+    grid-template-rows: 221px 64px auto;
+    justify-content: center;
+  }
+
+  .header {
+    align-self: end;
+    color: #6C4CDC;
+    margin: 0px;
+    text-align: center;
+    align-self: center;
+    font-family: "Antipasto Pro";
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 56px;
+  }
+
+  .bar {
+    display: flex;
+    width: 1720px;
+    /* gap: 20px; */
+    justify-content: center;
+    gap: 35px;
+    position: relative;
+  }
+
+  .bar>h1 {
+    color: #2C2640;
+
+    cursor: pointer;
+    font-family: "Antipasto Pro";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0px;
+    align-content: center;
+    position: relative;
+
+    z-index: 0;
+  }
+
+  .bar>h1.actionItemMenu {
+    color: #FF6347;
+  }
+
+
+  .backgroundItemMenu {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background-image: url('/7/actionItemMenu.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    /* left: 50%; */
+    transform: translateX(10%);
+  }
+
+  .backgroundItemMenu::before,
+  .backgroundItemMenu::after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+
+    /* Плавные переходы для всех свойств */
+  }
+
+  .backgroundItemMenu::before {
+    top: 0px;
+    left: -60%;
+    width: 100%;
+    height: 100%;
+    /* Задайте нужную высоту */
+    background-image: url('/7/actionItemLeft.svg');
+    /* Замените на нужное изображение */
+    z-index: 1;
+    /* Убедитесь, что псевдоэлемент расположен под основным контентом */
+  }
+
+  .backgroundItemMenu::after {
+    bottom: 0;
+    right: -60%;
+    width: 100%;
+    height: 100%;
+    background-image: url('/7/actionItemRigth.svg');
+    z-index: 1;
+  }
+
+  /* .backgroundItemMenu::after { */
+  /*   left: -20px; */
+  /*   content: ""; */
+  /*   position: absolute; */
+  /*   bottom: 0; */
+  /*   height: 100%; */
+  /*   width: 100%; */
+  /*   background-image: url('/7/actionItemLeft.svg'); */
+  /*   background-size: contain; */
+  /*   background-repeat: no-repeat; */
+  /*   background-position: center; */
+  /*   z-index: -1; */
+  /*   transition: width 0.3s ease-in-out, left 0.3s ease-in-out; */
+  /**/
+  /* } */
+
+  /* .actionItemMenu::after { */
+  /*   content: ''; */
+  /*   display: block; */
+  /*   position: absolute; */
+  /*   top: 0; */
+  /*   /* left: 0; */
+  /*   width: 100%; */
+  /*   /* height: auto; */
+  /*   background-image: url('/7/actionItemMenu.svg'); */
+  /*   /* background-size: cover; */
+  /*   /* Растягиваем изображение по всему контейнеру */
+  /*   background-repeat: no-repeat; */
+  /*   background-position: center; */
+  /*   /* z-index: -1; */
+  /*   /* Убедитесь, что изображение находится позади содержимого */
+  /* } */
+
+  .cardsBlock {
+    border-radius: 30px;
+    background: #FCDCD5;
+    width: 1720px;
+    height: 600px;
+    height: 680px;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 55px;
+    align-items: center;
+
+  }
+
+  /**/
+  .card {
+    display: grid;
+    grid-template-rows: 83px 114px 19px 59px 36px 16px 97px;
+    justify-content: center;
+    justify-items: center;
+    align-items: end;
+  }
+
+  .cardLR {
+    width: 300px;
+    height: 450px;
+
+    border-radius: 40px;
+    background: #FFF;
+
+  }
+
+  .cardLR>button {
+    color: #FFF;
+    width: 208px;
+    height: 54px;
+    background-color: #E16B5E;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 60px;
+    border: none;
+
+  }
+
+  .cardCenter.min {
+    width: 300px;
+    height: 450px;
+
+
+
+  }
+
+  .cardCenter {
+    transition: width 0.3s ease, height 0.3s ease;
+
+    width: 350px;
+    height: 500px;
+    border-radius: 40px;
+    opacity: 0.8;
+    background: #E16B5E;
+  }
+
+  .cardCenter>button {
+    color: #FFF;
+    width: 208px;
+    height: 54px;
+    background-color: transparent;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 60px;
+    border: 1px solid #FFF;
+  }
+
+  .formForSend {
+    /* position: absolute; */
+    /* border: 1px solid #6C4CDC; */
+    align-self: end;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content;
+    width: 280px;
+    height: 54px;
+    border-radius: 60px;
+    background: #FFF;
+    ;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .formForSend button {
+    width: 137px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #E78276;
+    border: none;
+    color: #FFF;
+
+
+    font-family: "Antipasto Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-right: 8px;
+  }
+
+  .formForSend input {
+    background: #fff;
+    width: 100px;
+    height: 20px;
+    border: none;
+    /* Убираем стандартную рамку */
+    border-bottom: 1px solid #000;
+    /* Добавляем линию снизу */
+    outline: none;
+    color: rgba(44, 38, 64, 0.70);
+
+    font-family: "Antipasto Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  .formForSend.inputLR {
+
+    border: 1px solid #E78276;
+    ;
+  }
+
+  /**/
+  /* .blockCenter { */
+  /*   width: 350px; */
+  /*   height: 500px; */
+  /*   border-radius: 40px; */
+  /*   opacity: 0.8; */
+  /*   background: #E16B5E; */
+  /* } */
+  /**/
+  /* .block h1 { */
+  /*   display: inline-block; */
+  /*   color: #2C2640; */
+  /*   margin: 0px; */
+  /**/
+  /*   font-family: "Antipasto Pro"; */
+  /*   font-size: 24px; */
+  /*   font-style: normal; */
+  /*   font-weight: 400; */
+  /*   line-height: 100%; */
+  /* } */
+
+  .card h2 {
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  .card h3 {
+    color: #2C2640;
+    justify-self: center;
+    text-align: center;
+    ;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
+
+  .card h4 {
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
+
+  .cardCenter h2 {
+    color: #fff;
+
+    font-family: "Antipasto Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  .cardCenter h3 {
+    color: #fff;
+    justify-self: center;
+    text-align: center;
+    ;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
+
+  .cardCenter h4 {
+    color: #fff;
+
+    font-family: "Antipasto Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
 }
 
-.item>h1 {
-  align-self: end;
-  color: #6C4CDC;
-  ;
-  margin: 0px;
-  text-align: center;
-  align-self: center;
-  font-family: "Antipasto Pro";
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 400;
-  padding-bottom: 56px;
-}
+@media (max-width: 768px) {
 
-.item>nav {
-  display: flex;
-  width: 1720px;
-  /* gap: 20px; */
-  justify-content: center;
-  gap: 35px;
-  position: relative;
-}
+  .item {
+    display: grid;
+    grid-template-rows: 10vh min-content min-content;
+    justify-content: center;
+  }
 
-.item>nav>h1 {
-  color: #2C2640;
+  .header {
+    align-self: center;
+    color: #6C4CDC;
+    ;
+    margin: 0px;
+    text-align: center;
+    align-self: center;
+    font-family: "Antipasto Pro";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    /* padding-bottom: 56px; */
+  }
 
-  cursor: pointer;
-  font-family: "Antipasto Pro";
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  margin: 0px;
-  align-content: center;
-  position: relative;
+  .bar {
+    justify-self: center;
+    display: flex;
+    gap: 35px;
+    position: relative;
+    overflow-x: scroll;
+    width: 85%;
+    height: 3vh;
+    scrollbar-width: none;
 
-  z-index: 0;
-}
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), black 10%, black 90%, rgba(0, 0, 0, 0));
 
-.item>nav>h1.actionItemMenu {
-  color: #FF6347;
-}
+  }
 
+  .bar::-webkit-scrollbar {
+    display: none;
+    /* Для Chrome, Safari */
+  }
 
-.backgroundItemMenu {
-  position: absolute;
-  bottom: 0;
-  height: 100%;
-  background-image: url('/7/actionItemMenu.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
+  .bar>h1:nth-of-type(1) {
+    margin-left: 20vw;
+  }
 
-.backgroundItemMenu::before,
-.backgroundItemMenu::after {
-  content: "";
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: all 0.3s ease-in-out;
-  /* Плавные переходы для всех свойств */
-}
+  .bar>h1:last-of-type {
+    margin-right: 20vw;
+  }
 
-.backgroundItemMenu::before {
-  top: 0px;
-  left: -110px;
-  width: 100%;
-  height: 100%;
-  /* Задайте нужную высоту */
-  background-image: url('/7/actionItemLeft.svg');
-  /* Замените на нужное изображение */
-  z-index: 1;
-  /* Убедитесь, что псевдоэлемент расположен под основным контентом */
-}
+  .bar>h1 {
+    white-space: nowrap;
+    color: #2C2640;
+    /* height: 10px; */
+    cursor: pointer;
+    font-family: "Antipasto Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0px;
+    align-content: center;
+    position: relative;
+    /* padding-bottom: 1vh; */
 
-/* .backgroundItemMenu::after { */
-/*   bottom: 0; */
-/*   right: 0; */
-/*   width: 50px; */
-/*   height: 100%; */
-/*   background-image: url('/7/actionItemLeft.svg'); */
-/*   z-index: 1; */
-/* } */
+    z-index: 0;
+  }
 
-/* .backgroundItemMenu::after { */
-/*   left: -20px; */
-/*   content: ""; */
-/*   position: absolute; */
-/*   bottom: 0; */
-/*   height: 100%; */
-/*   width: 100%; */
-/*   background-image: url('/7/actionItemLeft.svg'); */
-/*   background-size: contain; */
-/*   background-repeat: no-repeat; */
-/*   background-position: center; */
-/*   z-index: -1; */
-/*   transition: width 0.3s ease-in-out, left 0.3s ease-in-out; */
-/**/
-/* } */
-
-/* .actionItemMenu::after { */
-/*   content: ''; */
-/*   display: block; */
-/*   position: absolute; */
-/*   top: 0; */
-/*   /* left: 0; */
-/*   width: 100%; */
-/*   /* height: auto; */
-/*   background-image: url('/7/actionItemMenu.svg'); */
-/*   /* background-size: cover; */
-/*   /* Растягиваем изображение по всему контейнеру */
-/*   background-repeat: no-repeat; */
-/*   background-position: center; */
-/*   /* z-index: -1; */
-/*   /* Убедитесь, что изображение находится позади содержимого */
-/* } */
-
-.cardsBlock {
-  border-radius: 30px;
-  background: #FCDCD5;
-  width: 1720px;
-  height: 600px;
-  height: 680px;
-  grid-column: 1/-1;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 55px;
-  align-items: center;
-
-}
-
-/**/
-.card {
-  display: grid;
-  grid-template-rows: 83px 114px 19px 59px 36px 16px 97px;
-  justify-content: center;
-  justify-items: center;
-  align-items: end;
-}
-
-.cardLR {
-  width: 300px;
-  height: 450px;
-
-  border-radius: 40px;
-  background: #FFF;
-
-}
-
-.cardLR>button {
-  color: #FFF;
-  width: 208px;
-  height: 54px;
-  background-color: #E16B5E;
-  font-family: "Antipasto Pro";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  border-radius: 60px;
-  border: none;
-
-}
-
-.cardCenter.min {
-  width: 300px;
-  height: 450px;
+  .bar>h1.actionItemMenu {
+    color: #FF6347;
+  }
 
 
+  .backgroundItemMenu {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background-image: url('/7/actionItemMenu.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(15%);
+  }
 
-}
+  .backgroundItemMenu::before,
+  .backgroundItemMenu::after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+  }
 
-.cardCenter {
-  transition: width 0.3s ease, height 0.3s ease;
+  .backgroundItemMenu::before {
+    top: 0px;
+    /* left: -100%; */
+    transform: translateX(-65%);
+    width: 100%;
+    height: 100%;
+    background-image: url('/7/actionItemLeft.svg');
+    z-index: 1;
+  }
 
-  width: 350px;
-  height: 500px;
-  border-radius: 40px;
-  opacity: 0.8;
-  background: #E16B5E;
-}
+  .backgroundItemMenu::after {
+    bottom: 0;
+    right: 0px;
+    transform: translateX(60%);
 
-.cardCenter>button {
-  color: #FFF;
-  width: 208px;
-  height: 54px;
-  background-color: transparent;
-  font-family: "Antipasto Pro";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  border-radius: 60px;
-  border: 1px solid #FFF;
-}
+    width: 100%;
+    height: 100%;
+    background-image: url('/7/actionItemRigth.svg');
+    z-index: 1;
+  }
 
-.formForSend {
-  /* position: absolute; */
-  /* border: 1px solid #6C4CDC; */
-  align-self: end;
-  display: grid;
-  grid-template-rows: min-content;
-  grid-template-columns: min-content min-content;
-  width: 280px;
-  height: 54px;
-  border-radius: 60px;
-  background: #FFF;
-  ;
-  justify-content: end;
-  align-content: center;
-  align-items: center;
-  gap: 15px;
-  z-index: 10;
-  position: relative;
-}
+  /* .backgroundItemMenu::after { */
+  /*   left: -20px; */
+  /*   content: ""; */
+  /*   position: absolute; */
+  /*   bottom: 0; */
+  /*   height: 100%; */
+  /*   width: 100%; */
+  /*   background-image: url('/7/actionItemLeft.svg'); */
+  /*   background-size: contain; */
+  /*   background-repeat: no-repeat; */
+  /*   background-position: center; */
+  /*   z-index: -1; */
+  /*   transition: width 0.3s ease-in-out, left 0.3s ease-in-out; */
+  /**/
+  /* } */
 
-.formForSend button {
-  width: 137px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 60px;
-  background: #E78276;
-  border: none;
-  color: #FFF;
+  /* .actionItemMenu::after { */
+  /*   content: ''; */
+  /*   display: block; */
+  /*   position: absolute; */
+  /*   top: 0; */
+  /*   /* left: 0; */
+  /*   width: 100%; */
+  /*   /* height: auto; */
+  /*   background-image: url('/7/actionItemMenu.svg'); */
+  /*   /* background-size: cover; */
+  /*   /* Растягиваем изображение по всему контейнеру */
+  /*   background-repeat: no-repeat; */
+  /*   background-position: center; */
+  /*   /* z-index: -1; */
+  /*   /* Убедитесь, что изображение находится позади содержимого */
+  /* } */
+
+  .cardsBlock {
+    border-radius: 30px;
+    overflow-x: scroll;
+
+    background: #FCDCD5;
+    width: 100%;
+    height: 70vh;
+    grid-column: 1/-1;
+    display: flex;
+    /* flex: 0 0 auto; */
+    /* justify-content: center; */
+    align-content: center;
+    gap: 3vw;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    /* Центрирование элементов при прокрутке */
+    -webkit-overflow-scrolling: touch;
+    /* croll-behavior: smooth; */
+  }
+
+  .cardsBlock::-webkit-scrollbar {
+    display: none;
+    /* Для Chrome, Safari */
+  }
 
 
-  font-family: "Antipasto Pro";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  margin-right: 8px;
-}
+  /**/
+  .card {
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 7vh 7vh 3vh 6vh 7vh 2vh 8vh;
+    justify-content: center;
+    justify-items: center;
+    align-items: end;
+    scroll-snap-align: center;
+  }
 
-.formForSend input {
-  background: #fff;
-  width: 100px;
-  height: 20px;
-  border: none;
-  /* Убираем стандартную рамку */
-  border-bottom: 1px solid #000;
-  /* Добавляем линию снизу */
-  outline: none;
-  color: rgba(44, 38, 64, 0.70);
+  .cardLR {
+    width: 300px;
+    height: 80%;
 
-  font-family: "Antipasto Pro";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-}
+    border-radius: 40px;
+    background: #FFF;
 
-.formForSend.inputLR {
+  }
 
-  border: 1px solid #E78276;
-  ;
-}
+  .cardLR>button {
+    color: #FFF;
+    width: 208px;
+    height: 54px;
+    background-color: #E16B5E;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 60px;
+    border: none;
 
-/**/
-/* .blockCenter { */
-/*   width: 350px; */
-/*   height: 500px; */
-/*   border-radius: 40px; */
-/*   opacity: 0.8; */
-/*   background: #E16B5E; */
-/* } */
-/**/
-/* .block h1 { */
-/*   display: inline-block; */
-/*   color: #2C2640; */
-/*   margin: 0px; */
-/**/
-/*   font-family: "Antipasto Pro"; */
-/*   font-size: 24px; */
-/*   font-style: normal; */
-/*   font-weight: 400; */
-/*   line-height: 100%; */
-/* } */
+  }
 
-.card h2 {
-  color: #2C2640;
+  /* .cardCenter.min { */
+  /*   width: 300px; */
+  /*   height: 450px; */
+  /**/
+  /**/
+  /**/
+  /* } */
 
-  font-family: "Antipasto Pro";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  margin: 0px;
-}
+  .cardCenter {
+    transition: width 0.3s ease, height 0.3s ease;
+    scroll-snap-type: x mandatory;
 
-.card h3 {
-  color: #2C2640;
-  justify-self: center;
-  text-align: center;
-  ;
-  font-family: "Antipasto Pro";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  margin: 0px;
+    width: 80%;
+    height: 90%;
+    border-radius: 40px;
+    opacity: 0.8;
+    background: #E16B5E;
+  }
 
-}
+  .cardCenter>button {
+    color: #FFF;
+    width: 208px;
+    height: 54px;
+    background-color: transparent;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 60px;
+    border: 1px solid #FFF;
+  }
 
-.card h4 {
-  color: #2C2640;
+  .formForSend {
+    /* position: absolute; */
+    /* border: 1px solid #6C4CDC; */
+    align-self: end;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content min-content;
+    width: 280px;
+    height: 54px;
+    border-radius: 60px;
+    background: #FFF;
+    ;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    position: relative;
+  }
 
-  font-family: "Antipasto Pro";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  margin: 0px;
+  .formForSend button {
+    width: 137px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #E78276;
+    border: none;
+    color: #FFF;
 
-}
 
-.cardCenter h2 {
-  color: #fff;
+    font-family: "Antipasto Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-right: 8px;
+  }
 
-  font-family: "Antipasto Pro";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  margin: 0px;
-}
+  .formForSend input {
+    background: #fff;
+    width: 100px;
+    height: 20px;
+    border: none;
+    /* Убираем стандартную рамку */
+    border-bottom: 1px solid #000;
+    /* Добавляем линию снизу */
+    outline: none;
+    color: rgba(44, 38, 64, 0.70);
 
-.cardCenter h3 {
-  color: #fff;
-  justify-self: center;
-  text-align: center;
-  ;
-  font-family: "Antipasto Pro";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  margin: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
 
-}
+  .formForSend.inputLR {
 
-.cardCenter h4 {
-  color: #fff;
+    border: 1px solid #E78276;
+    ;
+  }
 
-  font-family: "Antipasto Pro";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  margin: 0px;
+  /**/
+  /* .blockCenter { */
+  /*   width: 350px; */
+  /*   height: 500px; */
+  /*   border-radius: 40px; */
+  /*   opacity: 0.8; */
+  /*   background: #E16B5E; */
+  /* } */
+  /**/
+  /* .block h1 { */
+  /*   display: inline-block; */
+  /*   color: #2C2640; */
+  /*   margin: 0px; */
+  /**/
+  /*   font-family: "Antipasto Pro"; */
+  /*   font-size: 24px; */
+  /*   font-style: normal; */
+  /*   font-weight: 400; */
+  /*   line-height: 100%; */
+  /* } */
 
+  .card h2 {
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  .card h3 {
+    color: #2C2640;
+    justify-self: center;
+    text-align: center;
+    ;
+    font-family: "Antipasto Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
+
+  .card h4 {
+    color: #2C2640;
+
+    font-family: "Antipasto Pro";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
+
+  .cardCenter h2 {
+    color: #fff;
+
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  .cardCenter h3 {
+    color: #fff;
+    justify-self: center;
+    text-align: center;
+    ;
+    font-family: "Antipasto Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
+
+  .cardCenter h4 {
+    color: #fff;
+
+    font-family: "Antipasto Pro";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0px;
+
+  }
 }
 
 /* .item div:nth-of-type(2) div button {} */

@@ -185,7 +185,7 @@
   }
 
   .board {
-    
+
     display: grid;
     width: 95vw;
     grid-template-rows: min-content;
@@ -221,7 +221,7 @@
     background-repeat: no-repeat;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,100%);
+    transform: translate(-50%, 100%);
     bottom: 0px;
 
   }
@@ -252,35 +252,37 @@
   .pLeft {
     display: none;
     position: absolute;
-    width: 190px;
-    height: 80px;
+    width: 10vw;
+    height: 9vw;
     display: flex;
-    margin-right: -140px;
+    /* margin-right: -140px; */
     border-radius: 14.756px;
     background: #FCDCD5;
     color: #000;
     z-index: 10;
     right: 0px;
     font-family: "Antipasto Pro";
-    font-size: 24px;
+    font-size: 9px;
     font-style: normal;
     font-weight: 300;
-    padding-left: 75px;
-    padding-right: 45px;
+    padding-left: 45px;
+    padding-right: 25px;
     align-items: center;
-    top: 50%;
-    transform: translateY(-50%);
+    /* top: 50%; */
+    transform: translate(-10vw, 60%);
+    bottom: 0px;
+    ;
   }
 
   .pLeft::before {
-    top: 14px;
-    left: 40px;
+    top: 4px;
+    left: 10px;
     content: "";
     position: absolute;
     display: inline-block;
     right: 0px;
-    width: 28px;
-    height: 28px;
+    width: 16px;
+    height: 16px;
     background-image: url('/purpleBall.svg');
     background-size: contain;
     background-repeat: no-repeat;

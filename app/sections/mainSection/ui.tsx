@@ -1,13 +1,17 @@
 'use client'
 import classNames from "classnames";
-import { motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 
 import styles from './mainSection.module.css'
 import { useEffect, useState } from "react";
 import { Stamp } from "./components/stamp";
+
 export function MainSection() {
   const [showInput, setShowButton] = useState(true);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   let isMobil = +(window.innerWidth) < 768;
 
@@ -16,9 +20,64 @@ export function MainSection() {
 
   return (
     <section className={classNames(styles.item)}>
+
+      <AnimatePresence>
+        {isMenuOpen && (<motion.div className={styles.menuMobil}
+          initial={{ opacity: 0, x: 300 }} // Начальная позиция
+          animate={{ opacity: 1, x: 0 }} // Появление
+          exit={{ opacity: 0, x: 300 }} // Исчезновение
+          transition={{ duration: 0.5 }}
+        >
+          <motion.a href="#home">Программы</motion.a>
+          <motion.a href="#about">Стоимость</motion.a>
+          <motion.a href="#services">О нас</motion.a>
+          <motion.a href="#contact">Контакты</motion.a>
+          <motion.img
+            className={classNames(styles.neuronsMenuMobil)}
+            src="/1/neuronsMenu.svg"
+            alt="Sample Image"
+
+          />
+          <motion.img
+            className={classNames(styles.iconIqHubWhite)}
+            src="/iqHubWhith.svg"
+            alt="Sample Image"
+          />
+          <motion.img
+            className={classNames(styles.closeMenu)}
+            src="/1/closeIcon.svg"
+            alt="Sample Image"
+            onClick={toggleMenu}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
+          <div>
+
+            <motion.img
+              src="/instagram.svg"
+              alt="Sample Image"
+            />
+            <motion.img
+              src="/telegram.svg"
+              alt="Sample Image"
+            />
+            <motion.img
+              src="/vk.svg"
+              alt="Sample Image"
+            />
+            <motion.img
+              src="/whatsapp.svg"
+              alt="Sample Image"
+            />
+          </div>
+        </motion.div>
+        )}</AnimatePresence>
       <motion.img
         src="/1/iconMenu.svg"
         alt="Sample Image"
+        onClick={toggleMenu}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         className={classNames(styles.iconMenu)}
       />
       <motion.img

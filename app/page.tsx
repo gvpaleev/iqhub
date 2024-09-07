@@ -13,13 +13,13 @@ export default function Home() {
 
   return (<>
 
-    {/* <MainSection /> */}
-    {/* <SectionTwo />  */}
-    {/* <SectionThree /> */}
-    {/* <SectionFour /> */}
-    {/* <SectionFive /> */}
+    <MainSection />
+    <SectionTwo />
+    <SectionThree />
+    <SectionFour />
+    <SectionFive />
     <SectionSix />
-    {/* <SectionSeven /> */}
-    {/* <SectionEight />  */}
+    <SectionSeven />
+    {/* <SectionEight /> */}
   </>);
 }
