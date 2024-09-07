@@ -52,11 +52,11 @@ export function SectionTwo() {
   };
   return (
     <section className={styles.item}>
-      <motion.img
+      {/* <motion.img
         className={styles.neuronus}
         src="/2/neurons.svg"
         alt="Sample Image"
-      />
+      /> */}
       <motion.img
         className={styles.brain}
 

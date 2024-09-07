@@ -44,7 +44,7 @@ export function SectionThree() {
           className={styles.button}
         >
           <input
-            placeholder="+79211234567 или t.me/IQHub"
+            placeholder="+79211234567"
           />
           <button>Отправить</button>
         </div>

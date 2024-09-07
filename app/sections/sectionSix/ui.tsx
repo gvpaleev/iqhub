@@ -35,38 +35,38 @@ export function SectionSix() {
       <div ref={playerContainerRef}
         className={styles.board}
       >
-        {/* <p className={styles.pTop}> */}
-        {/*   Интерактивная доска для занятий */}
-        {/* </p> */}
-        {/* <p className={styles.pLeft}> */}
-        {/*   Видеочат с педагогом */}
-        {/* </p> */}
+        <p className={styles.pTop}>
+          Интерактивная доска для занятий
+        </p>
+        <p className={styles.pLeft}>
+          Видеочат с педагогом
+        </p>
 
 
-        {/* <ReactPlayer */}
-        {/*   key={playerKey} */}
-        {/*   width="100%" */}
-        {/*   height="100%" */}
-        {/*   url={videosrc} */}
-        {/*   controls={false} // Убирает элементы управления */}
-        {/*   light={false}   // Отключает предварительный просмотр */}
-        {/*   pip={false}     // Отключает режим "картинка в картинке" */}
-        {/*   playing={isPlaying} // Запускает воспроизведение, если `true` */}
-        {/*   // Дополнительные параметры */}
-        {/*   config={{ */}
-        {/*     file: { */}
-        {/*       attributes: { */}
-        {/*         controlsList: 'nodownload nofullscreen noremoteplayback', */}
-        {/*       }, */}
-        {/*     }, */}
-        {/*   }} */}
-        {/*   style={{ */}
-        {/*     position: 'relative', */}
-        {/*     top: 0, */}
-        {/*     left: 0, */}
-        {/*     border: 'none', */}
-        {/*   }} */}
-        {/* /> */}
+        <ReactPlayer
+          key={playerKey}
+          width="100%"
+          height="100%"
+          url={videosrc}
+          controls={false} // Убирает элементы управления
+          light={false}   // Отключает предварительный просмотр
+          pip={false}     // Отключает режим "картинка в картинке"
+          playing={isPlaying} // Запускает воспроизведение, если `true`
+          // Дополнительные параметры 
+          config={{
+            file: {
+              attributes: {
+                controlsList: 'nodownload nofullscreen noremoteplayback',
+              },
+            },
+          }}
+          style={{
+            position: 'relative',
+            top: 0,
+            left: 0,
+            border: 'none',
+          }}
+        />
         <button
           onClick={handlePlayPause}
           style={{

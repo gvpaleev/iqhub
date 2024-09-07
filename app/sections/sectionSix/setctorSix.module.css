@@ -173,10 +173,10 @@
   .header {
     align-self: end;
     margin: 0px;
-    padding-left: 100px;
+    /* padding-left: 100px; */
     display: inline-block;
     color: #6C4CDC;
-    width: 626px;
+    width: 100vw;
 
     font-family: "Antipasto Pro";
     font-size: 35px;
@@ -185,12 +185,10 @@
   }
 
   .board {
-    background: red;
-    ;
+    
     display: grid;
-    width: 100vw;
-    height: 48vw;
-    /* grid-template-rows: min-content; */
+    width: 95vw;
+    grid-template-rows: min-content;
     justify-self: center;
     align-self: start;
     position: relative;
@@ -198,108 +196,108 @@
   }
 
   .board::after {
-    /* content: ""; */
-    /* display: inline-block; */
-    /* width: 332px; */
-    /* height: 400px; */
-    /* background-image: url('/6/neuron.svg'); */
-    /* background-size: contain; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    /* position: absolute; */
+    content: "";
+    display: inline-block;
+    width: 30vw;
+    height: 40vw;
+    background-image: url('/6/neuron.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
     /* left: -50px; */
     /* transform: translateX(-50%); */
-    /* bottom: -112px; */
+    bottom: -112px;
   }
 
   .board::before {
-    /* content: ""; */
-    /* display: inline-block; */
-    /* width: 232px; */
-    /* height: 112px; */
-    /* background-image: url('/playerLegs.svg'); */
-    /* background-size: contain; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    /* position: absolute; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    /* bottom: -112px; */
+    content: "";
+    display: inline-block;
+    width: 40vw;
+    height: 20vw;
+    background-image: url('/playerLegs.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,100%);
+    bottom: 0px;
 
   }
 
   .pTop {
     display: none;
-    /* position: absolute; */
-    /* width: 190px; */
-    /* height: 80px; */
+    position: absolute;
+    width: 30vw;
+    height: 15vw;
     /**/
-    /* display: flex; */
-    /* margin: -40px; */
-    /* border-radius: 14.756px; */
-    /* background: #FCDCD5; */
-    /* color: #000; */
-    /* z-index: 10; */
-    /* font-family: "Antipasto Pro"; */
-    /* font-size: 24px; */
-    /* font-style: normal; */
-    /* font-weight: 300; */
-    /* padding-left: 75px; */
-    /* padding-right: 45px; */
-    /* align-items: center; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
+    display: flex;
+    margin: -40px;
+    border-radius: 14.756px;
+    background: #FCDCD5;
+    color: #000;
+    z-index: 10;
+    font-family: "Antipasto Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    padding-left: 45px;
+    padding-right: 45px;
+    align-items: center;
+    right: 45px;
+    transform: translateX(-10vw);
   }
 
   .pLeft {
     display: none;
-    /* position: absolute; */
-    /* width: 190px; */
-    /* height: 80px; */
-    /* display: flex; */
-    /* margin-right: -140px; */
-    /* border-radius: 14.756px; */
-    /* background: #FCDCD5; */
-    /* color: #000; */
-    /* z-index: 10; */
-    /* right: 0px; */
-    /* font-family: "Antipasto Pro"; */
-    /* font-size: 24px; */
-    /* font-style: normal; */
-    /* font-weight: 300; */
-    /* padding-left: 75px; */
-    /* padding-right: 45px; */
-    /* align-items: center; */
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
+    position: absolute;
+    width: 190px;
+    height: 80px;
+    display: flex;
+    margin-right: -140px;
+    border-radius: 14.756px;
+    background: #FCDCD5;
+    color: #000;
+    z-index: 10;
+    right: 0px;
+    font-family: "Antipasto Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    padding-left: 75px;
+    padding-right: 45px;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .pLeft::before {
-    /* top: 14px; */
-    /* left: 40px; */
-    /* content: ""; */
-    /* position: absolute; */
-    /* display: inline-block; */
-    /* right: 0px; */
-    /* width: 28px; */
-    /* height: 28px; */
-    /* background-image: url('/purpleBall.svg'); */
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
+    top: 14px;
+    left: 40px;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 28px;
+    height: 28px;
+    background-image: url('/purpleBall.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
 
   }
 
   .pTop::before {
-    /* top: 14px; */
-    /* left: 40px; */
-    /* content: ""; */
-    /* position: absolute; */
-    /* display: inline-block; */
-    /* right: 0px; */
-    /* width: 28px; */
-    /* height: 28px; */
-    /* background-image: url('/purpleBall.svg'); */
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
+    top: 10px;
+    left: 10px;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/purpleBall.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
