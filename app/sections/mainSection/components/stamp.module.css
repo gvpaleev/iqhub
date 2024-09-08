@@ -8,14 +8,14 @@
 
   .brain {
     position: absolute;
-    left: -220px;
+    left: -320px;
     width: 180px;
     /* z-index: -10; */
   }
 
   .brainShadow {
     position: absolute;
-    left: -220px;
+    left: -320px;
     width: 180px;
     bottom: -30px;
 
@@ -27,7 +27,7 @@
 
   .neuron {
     position: absolute;
-    right: -200px;
+    right: -300px;
     width: 180px;
     /* z-index: -10; */
 
@@ -35,7 +35,7 @@
 
   .neuronShadow {
     position: absolute;
-    right: -200px;
+    right: -300px;
     width: 180px;
     bottom: -250px;
 
@@ -47,12 +47,14 @@
 
   .line1 {
     display: grid;
+    margin-left: 50px;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: "word1 word2 word3";
 
   }
 
   .line2 {
+    margin-left: -50px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: "word4 word4 word5";

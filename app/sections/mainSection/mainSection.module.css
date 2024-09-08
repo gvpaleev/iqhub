@@ -260,14 +260,19 @@
   .neuronsLeftMobil {
     position: absolute;
     top: 10vh;
+    scale: 1.2;
+    left: -50px;
     z-index: -100;
+    opacity: 0.6;
   }
 
   .neuronsRigthMobil {
     position: absolute;
-    top: 30vh;
+    top: 50vh;
     right: 0px;
     ;
+    scale: 1.5;
+    opacity: 0.6;
     z-index: -100;
   }
 

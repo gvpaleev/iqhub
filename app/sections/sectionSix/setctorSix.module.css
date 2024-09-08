@@ -108,7 +108,7 @@
     background: #FCDCD5;
     color: #000;
     z-index: 10;
-    right: 0px;
+    right: -100px;
     font-family: "Antipasto Pro";
     font-size: 24px;
     font-style: normal;

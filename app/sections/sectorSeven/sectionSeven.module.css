@@ -148,12 +148,15 @@
 
   .neronusLeft {
     position: absolute;
+    opacity: 0.4;
     left: 0px;
 
     z-index: -10;
   }
 
   .neronusRigth {
+    opacity: 0.4;
+
     position: absolute;
     right: 0px;
 
@@ -558,7 +561,7 @@
   .card {
     flex-shrink: 0;
     display: grid;
-    grid-template-rows: 7vh 7vh 3vh 6vh 7vh 2vh 8vh;
+    grid-template-rows: 7vh 7vh 3vh 6vh 10vh 10vh 8vh;
     justify-content: center;
     justify-items: center;
     align-items: end;

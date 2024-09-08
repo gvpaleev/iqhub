@@ -23,9 +23,10 @@
 
   .brain {
 
+    scale: 0.9;
     position: absolute;
     width: 300px;
-    left: 243px;
+    left: 253px;
     bottom: 100px;
     z-index: 10;
   }
@@ -74,7 +75,7 @@
     min-width: 415px;
     border-radius: 40px;
     background: #FFF;
-    z-index: 0
+    z-index: 0;
   }
 
   .card h1 {
@@ -256,9 +257,11 @@
   }
 
   .neuronus {
-    position: absolute;
-    left: 0px;
-    z-index: -10;
+    /* position: absolute; */
+    /* left: 0px; */
+    /* z-index: -10; */
+    display: none;
+    ;
   }
 
   .brain {
