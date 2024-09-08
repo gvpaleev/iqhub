@@ -64,6 +64,6 @@ export default function Home() {
     <SectionFive />
     <SectionSix />
     <SectionSeven />
-    {/* <SectionEight /> */}
+    <SectionEight />
   </>);
 }

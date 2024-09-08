@@ -6,6 +6,8 @@ import classNames from 'classnames';
 export function Stamp(props: { className: string, controlH2: AnimationControls }) {
   const controlBrain = useAnimation();
   const controlNeuron = useAnimation();
+  const controlBrainShadow = useAnimation();
+  const controlNeuronShadow = useAnimation();
   const controlH1One = useAnimation();
   const controlH1Two = useAnimation();
   // const controlH2 = useAnimation();
@@ -71,7 +73,24 @@ export function Stamp(props: { className: string, controlH2: AnimationControls }
           ease: "easeOut" // Тип перехода
         }
       })
-
+      controlBrainShadow.start({
+        scale: [0.6, 1.1, 1],
+        y: [50, -10, 0],
+        opacity: [0, 1.1, 1],
+        transition: {
+          duration: 0.6, // Длительность анимации
+          ease: "easeOut" // Тип перехода
+        }
+      })
+      controlNeuronShadow.start({
+        scale: [0.6, 1.1, 1],
+        y: [50, -10, 0],
+        opacity: [0, 1.1, 1],
+        transition: {
+          duration: 0.6, // Длительность анимации
+          ease: "easeOut" // Тип перехода
+        }
+      })
 
 
     })
@@ -97,13 +116,32 @@ export function Stamp(props: { className: string, controlH2: AnimationControls }
       animate={controlBrain}
     />
     <motion.img
+      className={styles.brainShadow}
+      animate={controlBrainShadow}
+      src="/1/shadow.svg"
+
+      initial={{ scale: 0.6, y: 50, opacity: 0 }}
+      alt="Sample Image"
+    />
+
+    <motion.img
       className={styles.neuron}
       src="/1/neuron.svg"
       alt="Sample Image"
       initial={{ scale: 0.6, y: 100 }}
       animate={controlNeuron}
     />
+    <motion.img
+      className={styles.neuronShadow}
+      initial={{ scale: 0.6, y: 50, opacity: 0 }}
+      animate={controlNeuronShadow}
+      src="/1/shadow.svg"
+      alt="Sample Image"
+
+    />
+
     <motion.div
+
       className={styles.line1}
       initial={{ opacity: 0 }}
       animate={controlH1One}

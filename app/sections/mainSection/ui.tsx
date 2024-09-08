@@ -81,6 +81,10 @@ export function MainSection() {
         className={classNames(styles.iconMenu)}
       />
       <motion.img
+        src="/1/neuronsLeftMobil.svg"
+        alt="Sample Image"
+        className={classNames(styles.neuronsLeftMobil)}
+      />     <motion.img
         src="/1/neuronsLeft.svg"
         alt="Sample Image"
         className={classNames(styles.neuronsLeft)}
@@ -89,6 +93,12 @@ export function MainSection() {
         className={classNames(styles.neuronsRigth)}
 
         src="/1/neuronsRigth.svg"
+        alt="Sample Image"
+      />
+      <motion.img
+        className={classNames(styles.neuronsRigthMobil)}
+
+        src="/1/neuronsRigthMobil.svg"
         alt="Sample Image"
       />
       <motion.img

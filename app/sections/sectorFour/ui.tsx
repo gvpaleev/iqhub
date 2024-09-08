@@ -40,6 +40,9 @@ export function SectionFour() {
 
   const { scrollY } = useScroll();
   const ref = useRef<HTMLDivElement>(null);
+  const parentRef = useRef(null); // Реф для родителя
+  const childRef = useRef(null);
+
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -60,10 +63,29 @@ export function SectionFour() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     const items = ref.current.querySelectorAll(`.${styles.item}`);
     items.forEach((item) => observer.observe(item));
+    ///////////////////////
+    const parent = ref.current;
+    const child = childRef.current;
+
+    if (parent && child) {
+      const parentHeight = parent.clientHeight;
+      const childHeight = child.clientHeight;
+      debugger;
+      // Вычисляем разницу между высотой родителя и дочернего элемента
+      const marginBottomValue = parentHeight - childHeight - 200;
+
+      // Применяем это значение к margin-bottom дочернего элемента
+      child.style.marginBottom = `calc(${marginBottomValue}px - 10vh)`;
+    } else {
+      console.error('Родитель или дочерний элемент не найден');
+    }
+
 
     return () => {
       items.forEach((item) => observer.unobserve(item));
     };
+
+
   }, []);
   return (
     <section className={styles.item}>
@@ -84,7 +106,9 @@ export function SectionFour() {
       >
         {data.map((item, i) => {
           return (<div key={i}
-            className={styles.card}>
+            className={styles.card}
+            ref={i === 5 ? childRef : null}
+          >
             <h1>{item.title}</h1>
             <ul>
               {item.text.map((elem, j) => {

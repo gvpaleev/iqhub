@@ -141,7 +141,23 @@
     align-content: center;
     gap: 55px;
     align-items: center;
+    position: relative;
+    z-index: 0;
 
+  }
+
+  .neronusLeft {
+    position: absolute;
+    left: 0px;
+
+    z-index: -10;
+  }
+
+  .neronusRigth {
+    position: absolute;
+    right: 0px;
+
+    z-index: -10;
   }
 
   /**/
@@ -536,6 +552,8 @@
   }
 
 
+
+
   /**/
   .card {
     flex-shrink: 0;
@@ -752,6 +770,17 @@
     font-style: normal;
     font-weight: 300;
     margin: 0px;
+
+  }
+
+  .neronusLeft {
+
+    display: none;
+  }
+
+  .neronusRigth {
+
+    display: none;
 
   }
 }

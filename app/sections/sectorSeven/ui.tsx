@@ -157,7 +157,6 @@ export function SectionSeven() {
       <motion.nav
         className={styles.bar}
       >
-
         <motion.div
           className={styles.backgroundItemMenu}
           style={{
@@ -187,6 +186,16 @@ export function SectionSeven() {
 
         className={styles.cardsBlock}
       >
+        <motion.img
+          className={classNames(styles.neronusLeft)}
+          src="/7/neronusLeft.svg"
+          alt="Sample Image"
+        />
+        <motion.img
+          className={classNames(styles.neronusRigth)}
+          src="/7/neronusRigth.svg"
+          alt="Sample Image"
+        />
 
 
         {data[itemMenu].cards.map((item, i) => {

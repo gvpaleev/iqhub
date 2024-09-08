@@ -30,6 +30,14 @@
     /* transform: scale(min(1, calc(100vw / 1920))); */
   }
 
+  .neuronsLeftMobil {
+    display: none;
+  }
+
+  .neuronsRigthMobil {
+    display: none;
+  }
+
   /* Правая нейронкаоо  */
   .neuronsRigth {
     opacity: 0.4;
@@ -246,15 +254,21 @@
 
   /* Левая нейронкаоо  */
   .neuronsLeft {
-    /* position: absolute; */
-    /* opacity: 0.4; */
     display: none;
-    /* scale: 0.1; */
-    /* top: 0px; */
-    /* left: 0px; */
-    /* z-index: -10; */
-    /* width: 75%; */
-    /* transform: scale(min(1, calc(100vw / 1920))); */
+  }
+
+  .neuronsLeftMobil {
+    position: absolute;
+    top: 10vh;
+    z-index: -100;
+  }
+
+  .neuronsRigthMobil {
+    position: absolute;
+    top: 30vh;
+    right: 0px;
+    ;
+    z-index: -100;
   }
 
   /* Правая нейронкаоо  */
