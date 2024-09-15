@@ -13,7 +13,7 @@ export function MainSection() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  let isMobil = +(window.innerWidth) < 768;
+  // let isMobil = +(window.innerWidth) < 768;
 
 
   const controlH2 = useAnimation();
@@ -143,7 +143,7 @@ export function MainSection() {
 
       <motion.div
         className={styles.button}
-        onMouseEnter={() => { if (!isMobil) setShowButton(false) }} // Показываем поле ввода при наведении
+      // onMouseEnter={() => { if (!isMobil) setShowButton(false) }} // Показываем поле ввода при наведении
       // onMouseLeave={() => setShowButton(true)} // Скрываем поле ввода при уходе курсора
 
       >
@@ -169,7 +169,7 @@ export function MainSection() {
             transition={{ duration: 0.5 }}      //
           >
             <input type="text"
-              placeholder={(!isMobil ? "+79211234567 или t.me/IQHub" : '+79211234567')}
+            // placeholder={(!isMobil ? "+79211234567 или t.me/IQHub" : '+79211234567')}
             /> <button>записаться</button>
           </motion.div>
 

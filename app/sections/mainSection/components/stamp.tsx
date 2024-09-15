@@ -13,8 +13,6 @@ export function Stamp(props: { className: string, controlH2: AnimationControls }
   // const controlH2 = useAnimation();
   const controlSpanOne = useAnimation();
   const controlSpanTwo = useAnimation();
-  let isMobil = +(window.innerWidth) < 768;
-  console.log(isMobil)
   useEffect(() => {
 
     Promise.all([

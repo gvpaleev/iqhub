@@ -41,17 +41,24 @@ export function SectionFour() {
   const { scrollY } = useScroll();
   const ref = useRef<HTMLDivElement>(null);
   const parentRef = useRef(null); // Реф для родителя
-  const childRef = useRef(null);
+  const childRef = useRef<HTMLDivElement | null>(null);
 
+  // useEffect(() => {
+  //   const observerOptions = {
+  //     root: null,
+  //     rootMargin: '-100px 0px 0px 0px',
+  //     threshold: 1.0
+  //   };
   useEffect(() => {
-    const observerOptions = {
+    const observerOptions: IntersectionObserverInit = {
       root: null,
       rootMargin: '-100px 0px 0px 0px',
       threshold: 1.0
     };
 
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
+    // Прописываем тип для массива входных данных IntersectionObserverEntry[]
+    const observerCallback = (entries: IntersectionObserverEntry[]): void => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.intersectionRatio < 1) {
           entry.target.classList.add(styles.sticky);
         } else {
@@ -61,32 +68,71 @@ export function SectionFour() {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const items = ref.current.querySelectorAll(`.${styles.item}`);
-    items.forEach((item) => observer.observe(item));
-    ///////////////////////
-    const parent = ref.current;
-    const child = childRef.current;
 
-    if (parent && child) {
-      const parentHeight = parent.clientHeight;
-      const childHeight = child.clientHeight;
-      debugger;
-      // Вычисляем разницу между высотой родителя и дочернего элемента
-      const marginBottomValue = parentHeight - childHeight - 200;
+    // Убедимся, что ref существует и имеет правильный тип
+    if (ref.current) {
+      const items = ref.current.querySelectorAll(`.${styles.item}`) as NodeListOf<HTMLDivElement>;
+      items.forEach((item: HTMLDivElement) => observer.observe(item));
 
-      // Применяем это значение к margin-bottom дочернего элемента
-      child.style.marginBottom = `calc(${marginBottomValue}px - 10vh)`;
-    } else {
-      console.error('Родитель или дочерний элемент не найден');
+      const parent = ref.current;
+      const child = childRef.current;
+
+      if (parent && child) {
+        const parentHeight: number = parent.clientHeight;
+        const childHeight: number = child.clientHeight;
+
+        // Вычисляем разницу между высотой родителя и дочернего элемента
+        const marginBottomValue = parentHeight - childHeight - 200;
+
+        // Применяем это значение к margin-bottom дочернего элемента
+        child.style.marginBottom = `calc(${marginBottomValue}px - 10vh)`;
+      } else {
+        console.error('Родитель или дочерний элемент не найден');
+      }
+
+      return () => {
+        items.forEach((item: HTMLDivElement) => observer.unobserve(item));
+      };
     }
-
-
-    return () => {
-      items.forEach((item) => observer.unobserve(item));
-    };
-
-
   }, []);
+  //   const observerCallback = (entries: IntersectionObserverEntry[]) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.intersectionRatio < 1) {
+  //         entry.target.classList.add(styles.sticky);
+  //       } else {
+  //         entry.target.classList.remove(styles.sticky);
+  //       }
+  //     });
+  //   };
+  //
+  //   const observer = new IntersectionObserver(observerCallback, observerOptions);
+  //   if (ref.current) {
+  //     const items = ref.current.querySelectorAll(`.${styles.item}`);
+  //     items.forEach((item) => observer.observe(item));
+  //     ///////////////////////
+  //     const parent = ref.current;
+  //     const child = childRef.current;
+  //
+  //     if (parent && child) {
+  //       const parentHeight = parent.clientHeight;
+  //       const childHeight = child.clientHeight;
+  //       debugger;
+  //       // Вычисляем разницу между высотой родителя и дочернего элемента
+  //       const marginBottomValue = parentHeight - childHeight - 200;
+  //
+  //       // Применяем это значение к margin-bottom дочернего элемента
+  //       child.style.marginBottom = `calc(${marginBottomValue}px - 10vh)`;
+  //     } else {
+  //       console.error('Родитель или дочерний элемент не найден');
+  //     }
+  //
+  //
+  //     return () => {
+  //       items.forEach((item) => observer.unobserve(item));
+  //     };
+  //   }
+  //
+  // }, []);
   return (
     <section className={styles.item}>
       <motion.img

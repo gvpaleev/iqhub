@@ -82,9 +82,9 @@ export function SectionSeven() {
     }
   }, [itemMenu]);
 
-  const handleScrollToCenter = (index) => {
+  const handleScrollToCenter = (index: number) => {
     const container = document.querySelector(`.${styles.bar}`);
-    const selectedItem = container.querySelectorAll('h1')[index];
+    const selectedItem = container?.querySelectorAll('h1')[index];
 
     if (container && selectedItem) {
       const containerWidth = container.clientWidth;
@@ -124,7 +124,7 @@ export function SectionSeven() {
       const duration = 500; // Длительность анимации в миллисекундах
       const startTime = performance.now();
 
-      const animateScroll = (currentTime) => {
+      const animateScroll = (currentTime: number) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const easeInOut = progress < 0.5
