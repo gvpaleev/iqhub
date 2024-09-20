@@ -12,49 +12,42 @@ import { SectionSeven } from "./sections/sectorSeven/ui";
 import { SectionEight } from "./sections/sectorEigh/ui";
 import { useEffect } from "react";
 export default function Home() {
-  // useEffect(() => {
-  //   const sections = document.querySelectorAll('section');
-  //
-  //   function snapToSection() {
-  //     const scrollTop = window.scrollY;
-  //     const windowHeight = window.innerHeight;
-  //     let closestSection = null;
-  //     let minDistance = Number.POSITIVE_INFINITY;
-  //
-  //     sections.forEach(section => {
-  //       const sectionTop = section.offsetTop;
-  //       const distance = Math.abs(sectionTop - scrollTop);
-  //
-  //       if (distance < minDistance) {
-  //         minDistance = distance;
-  //         closestSection = section;
-  //       }
-  //     });
-  //
-  //     if (closestSection) {
-  //       closestSection.scrollIntoView({
-  //         behavior: 'smooth',
-  //         block: 'start'
-  //       });
-  //     }
-  //   }
-  //
-  //   window.addEventListener('scroll', () => {
-  //     clearTimeout(window.scrollTimeout);
-  //     window.scrollTimeout = setTimeout(snapToSection, 200);
-  //   });
-  //
-  //   window.addEventListener('resize', snapToSection);
-  //
-  //   // Начальная прокрутка при загрузке страницы
-  //   snapToSection();
-  //
-  //   // Очистка обработчиков событий при размонтировании компонента
-  //   return () => {
-  //     window.removeEventListener('scroll', snapToSection);
-  //     window.removeEventListener('resize', snapToSection);
-  //   };
-  // }, []);
+
+  useEffect(() => {
+    const section = document.getElementById('section4'); // Получаем элемент с id sectionFix
+
+    if (!section) return; // Если элемент не найден, не продолжаем выполнение
+
+    function snapToSection() {
+      const scrollTop = window.scrollY;
+      const sectionTop = section.offsetTop;
+      const distance = Math.abs(sectionTop - scrollTop);
+
+      // Прокручиваем к секции, если она ближе к текущей позиции прокрутки
+      if (distance < window.innerHeight / 2) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      clearTimeout(window.scrollTimeout);
+      window.scrollTimeout = setTimeout(snapToSection, 200); // Дебаунс для плавной работы
+    });
+
+    window.addEventListener('resize', snapToSection); // Пересчитываем при изменении размера окна
+
+    // Начальная прокрутка при загрузке страницы
+    snapToSection();
+
+    // Очистка обработчиков событий при размонтировании компонента
+    return () => {
+      window.removeEventListener('scroll', snapToSection);
+      window.removeEventListener('resize', snapToSection);
+    };
+  }, []);
   return (<>
 
     <MainSection />

@@ -195,7 +195,7 @@
   .container {
     position: relative;
     display: grid;
-    height: 80vh;
+    height: 550px;
     grid-template-rows: 10vh 6vh 6vh 15vh 10vh;
     width: 85vw;
     grid-template-columns: auto auto;
@@ -205,7 +205,7 @@
       "word5 word5"
       "word6 word6"
       "input input";
-    border-radius: 40px;
+    border-radius: 27px;
     align-content: center;
     justify-content: center;
     align-items: end;
@@ -214,6 +214,43 @@
 
     background: #D7C0F5;
   }
+
+  .container::before {
+    content: "";
+    display: inline-block;
+    width: 179px;
+    height: 290px;
+    /* transform: scale(0.8); */
+    opacity: 0.4;
+    transform-origin: left top;
+    background-image: url('/3/neronusLeftMob.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+  }
+
+  .container::after {
+    content: "";
+    display: inline-block;
+    width: 265.6px;
+    height: 232.4px;
+    /* transform: scale(0.8); */
+    opacity: 0.4;
+    transform-origin: right bottom;
+    background-image: url('/3/neronusRigthMob.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: -10;
+  }
+
 
   .neuronsLeft {
     display: none;
@@ -245,7 +282,7 @@
 
   .word2 {
     margin-left: -45px;
-    margin-bottom: -10px;
+    margin-bottom: -6px;
     grid-area: word2;
 
     position: relative;

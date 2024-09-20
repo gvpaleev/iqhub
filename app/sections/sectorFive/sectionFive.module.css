@@ -199,8 +199,11 @@
 
 
   .item>div {
+    /* padding: 16px; */
+    margin: 18px;
+
     display: grid;
-    height: 100vh;
+    height: 700px;
     grid-template-rows: 20vh 6vh 15vh 17vh 20vh;
     grid-template-columns: 50vw 50vw;
     grid-template-areas: "word1 word2"
@@ -226,11 +229,11 @@
     left: -350px;
     bottom: -100px;
     z-index: -10;
-    scale: 0.5;
+    scale: 0.45;
   }
 
   .brain2 {
-    scale: 0.5;
+    scale: 0.45;
 
     position: absolute;
     top: -200px;
@@ -240,7 +243,7 @@
 
   .brain3 {
     position: absolute;
-    scale: 0.5;
+    scale: 0.45;
 
     right: -350px;
     bottom: -250px;
@@ -250,7 +253,7 @@
 
   .brain4 {
     position: absolute;
-    scale: 0.5;
+    scale: 0.45;
 
     bottom: -550px;
     left: 100px;

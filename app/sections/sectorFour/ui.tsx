@@ -134,7 +134,7 @@ export function SectionFour() {
   //
   // }, []);
   return (
-    <section className={styles.item}>
+    <section id='section4' className={styles.item}>
       <motion.img
         className={styles.neuron}
         src="/3/neuron.svg"

@@ -2,21 +2,23 @@
 
   .item {
     display: grid;
-    grid-template-rows: 221px 64px auto;
+    grid-template-rows: 20% 64px auto;
     justify-content: center;
   }
 
   .header {
+
     align-self: end;
     color: #6C4CDC;
     margin: 0px;
     text-align: center;
-    align-self: center;
+    padding-bottom: 3%;
+    /* align-self: center; */
     font-family: "Antipasto Pro";
     font-size: 75px;
     font-style: normal;
     font-weight: 400;
-    padding-bottom: 56px;
+    /* padding-bottom: 56px; */
   }
 
   .bar {
@@ -133,8 +135,8 @@
     border-radius: 30px;
     background: #FCDCD5;
     width: 1720px;
-    height: 600px;
-    height: 680px;
+    height: 90%;
+    /* height: 680px; */
     grid-column: 1/-1;
     display: flex;
     justify-content: center;
@@ -150,6 +152,10 @@
     position: absolute;
     opacity: 0.4;
     left: 0px;
+    bottom: 0px;
+
+    transform: scale(0.7);
+    transform-origin: left bottom;
 
     z-index: -10;
   }
@@ -159,6 +165,8 @@
 
     position: absolute;
     right: 0px;
+    transform: scale(0.7);
+    transform-origin: right;
 
     z-index: -10;
   }

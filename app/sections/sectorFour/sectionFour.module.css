@@ -1,6 +1,8 @@
 @media (min-width: 769px) {
 
   .item {
+    height: 100vh;
+
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: 300px auto;
@@ -197,6 +199,8 @@
 
 @media (max-width: 768px) {
   .item {
+    height: 100vh;
+
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: 30vh auto;

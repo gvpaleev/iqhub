@@ -40,8 +40,15 @@ html {
 }
 
 section {
-  height: 100vh;
+
+  display: inline-block;
   scroll-snap-align: start;
   /* position: relative; */
   z-index: 100;
+}
+
+@media (min-width: 769px) {
+  section {
+    min-height: 100vh;
+  }
 }

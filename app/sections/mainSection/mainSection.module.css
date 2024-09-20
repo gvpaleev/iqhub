@@ -51,6 +51,7 @@
   }
 
   .stamp {
+    scale: 1.05;
     justify-self: center;
     grid-area: stamp;
     /* display: absolute; */
@@ -191,7 +192,7 @@
   .item {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: 60px 35vh 90px 94px 125px;
+    grid-template-rows: 60px 35vh 90px 94px;
     grid-template-areas: "icon icoMen"
       "stamp stamp"
       "stamp3 stamp3"
@@ -268,10 +269,10 @@
 
   .neuronsRigthMobil {
     position: absolute;
-    top: 50vh;
+    top: 30vh;
     right: 0px;
     ;
-    scale: 1.5;
+    /* scale: 1.5; */
     opacity: 0.6;
     z-index: -100;
   }
@@ -405,8 +406,9 @@
     width: 150px;
     height: 40px;
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 0.5px solid #000;
     outline: none;
+    text-align: center;
   }
 
 }

@@ -34,7 +34,7 @@ export function SectionEight() {
   }, [data.length]);
 
   return (
-    <section className={styles.item}>
+    <section id='section8' className={styles.item}>
       <motion.img
         className={styles.neuronusLeft}
         src='/8/neuronus.svg' />

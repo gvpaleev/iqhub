@@ -31,7 +31,7 @@ export function MainSection() {
           <motion.a href="#home">Программы</motion.a>
           <motion.a href="#about">Стоимость</motion.a>
           <motion.a href="#services">О нас</motion.a>
-          <motion.a href="#contact">Контакты</motion.a>
+          <motion.a href="#section8">Вопросы</motion.a>
           <motion.img
             className={classNames(styles.neuronsMenuMobil)}
             src="/1/neuronsMenu.svg"
@@ -108,10 +108,10 @@ export function MainSection() {
       />
       <nav className={classNames(styles.menu)}
       >
-        <motion.a href="#home">Программы</motion.a>
-        <motion.a href="#about">Стоимость</motion.a>
-        <motion.a href="#services">О нас</motion.a>
-        <motion.a href="#contact">Контакты</motion.a>
+        <motion.a href="#section4">Программы</motion.a>
+        <motion.a href="#section7">Стоимость</motion.a>
+        <motion.a href="#section2">О нас</motion.a>
+        <motion.a href="#section8">Вопросы</motion.a>
       </nav>
       <div className={classNames(styles.hrefIcons)}
       >
@@ -169,7 +169,7 @@ export function MainSection() {
             transition={{ duration: 0.5 }}      //
           >
             <input type="text"
-            // placeholder={(!isMobil ? "+79211234567 или t.me/IQHub" : '+79211234567')}
+              placeholder={"+79211234567"}
             /> <button>записаться</button>
           </motion.div>
 

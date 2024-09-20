@@ -151,7 +151,7 @@ export function SectionSeven() {
 
   // let isMobil = +(window.innerWidth) < 768;
   return (
-    <section className={styles.item}>
+    <section id='section7' className={styles.item}>
       <h1 className={styles.header}>Стоимость</h1>
 
       <motion.nav

@@ -51,7 +51,7 @@ export function SectionTwo() {
     }
   };
   return (
-    <section className={styles.item}>
+    <section id="section2" className={styles.item}>
       <motion.img
         className={styles.neuronus}
         src="/2/neurons.svg"

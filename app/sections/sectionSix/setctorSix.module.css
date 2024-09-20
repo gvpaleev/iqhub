@@ -5,6 +5,7 @@
     /* grid-template-columns: auto auto; */
     grid-template-rows: 226px auto;
     position: relative;
+    padding-bottom: 10vh;
   }
 
   .neuronus {

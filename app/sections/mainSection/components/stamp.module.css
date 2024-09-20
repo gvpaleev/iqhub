@@ -48,6 +48,7 @@
   .line1 {
     display: grid;
     margin-left: 50px;
+    gap: 20px;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: "word1 word2 word3";
 
@@ -123,13 +124,12 @@
   .item {
     display: grid;
     grid-template-rows: repeat(2, auto);
-
     row-gap: 10px;
     position: relative;
     justify-items: center;
     align-items: center;
-    ;
   }
+
 
   .line1 {
     display: grid;
@@ -198,6 +198,7 @@
   .word1 {
     grid-area: word1;
 
+
   }
 
   .word2 {
@@ -205,8 +206,8 @@
     grid-area: word2;
     color: var(--subtlePurple);
     /* height: 0%; */
-    bottom: 5px;
-    margin-left: -30px;
+    bottom: 10px;
+    margin-left: -50px;
     /* transform: translateX(-51px); */
   }
 

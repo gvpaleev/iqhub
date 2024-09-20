@@ -10,8 +10,8 @@ function VideoPlayer() {
        return (
               <div className={styles.item}>
                      <ReactPlayer
-                            width="1000px"
-                            height="560px"
+                            // width="1000px"
+                            // height="560px"
                             url={videosrc}
                             controls={true}
                             // light is usefull incase of dark mode
