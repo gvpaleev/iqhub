@@ -49,6 +49,12 @@ export function SectionFour() {
   //     rootMargin: '-100px 0px 0px 0px',
   //     threshold: 1.0
   //   };
+  const handleButtonClick = () => {
+    const targetElement = document.getElementById('section7');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
@@ -161,7 +167,7 @@ export function SectionFour() {
                 return (<li key={j}>{elem}</li>)
               })}
             </ul>
-            <button>Стоимость</button>
+            <button onClick={() => { handleButtonClick() }}>Стоимость</button>
             <motion.img
               src={`/3/neuron${i + 1}.svg`} alt="Sample Image"
               initial={{ opacity: 0, scale: 0.5 }}
