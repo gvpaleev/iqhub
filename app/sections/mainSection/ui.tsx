@@ -28,9 +28,9 @@ export function MainSection() {
           exit={{ opacity: 0, x: 300 }} // Исчезновение
           transition={{ duration: 0.5 }}
         >
-          <motion.a href="#home">Программы</motion.a>
-          <motion.a href="#about">Стоимость</motion.a>
-          <motion.a href="#services">О нас</motion.a>
+          <motion.a href="#section4">Программы</motion.a>
+          <motion.a href="#section7">Стоимость</motion.a>
+          <motion.a href="#section2">О нас</motion.a>
           <motion.a href="#section8">Вопросы</motion.a>
           <motion.img
             className={classNames(styles.neuronsMenuMobil)}
