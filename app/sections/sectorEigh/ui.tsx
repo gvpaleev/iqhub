@@ -29,9 +29,9 @@ export function SectionEight() {
     }
   ]
 
-  useEffect(() => {
-    // contentRefs.current = contentRefs.current.slice(0, data.length);
-  }, [data.length]);
+  // useEffect(() => {
+  //   // contentRefs.current = contentRefs.current.slice(0, data.length);
+  // }, [data.length]);
 
   return (
     <section id='section8' className={styles.item}>
@@ -81,7 +81,11 @@ export function SectionEight() {
         <motion.img
           src='/8/neuronusFooter.svg' />
         <motion.img
+
           src='/8/iqHub.svg' />
+        <motion.img
+          src='/8/neuronusFooterMob.svg' />
+
         <nav>
           <a href='#'>Программы</a>
           <a href='#'>Стоимость</a>

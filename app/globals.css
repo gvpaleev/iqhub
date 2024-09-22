@@ -44,6 +44,7 @@ section {
   display: inline-block;
   scroll-snap-align: start;
   /* position: relative; */
+  width: 100wh;
   z-index: 100;
 }
 

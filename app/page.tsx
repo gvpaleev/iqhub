@@ -13,30 +13,36 @@ import { SectionEight } from "./sections/sectorEigh/ui";
 import { useEffect } from "react";
 export default function Home() {
 
+  interface CustomWindow extends Window {
+    scrollTimeout?: number;
+  }
   useEffect(() => {
+    const customWindow = window as CustomWindow;
+
     const section = document.getElementById('section4'); // Получаем элемент с id sectionFix
 
     if (!section) return; // Если элемент не найден, не продолжаем выполнение
 
     function snapToSection() {
       const scrollTop = window.scrollY;
-      const sectionTop = section.offsetTop;
+      const sectionTop = section!.offsetTop; // Так как секция уже проверена
       const distance = Math.abs(sectionTop - scrollTop);
 
       // Прокручиваем к секции, если она ближе к текущей позиции прокрутки
       if (distance < window.innerHeight / 2) {
-        section.scrollIntoView({
+        section!.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
       }
     }
 
-    window.addEventListener('scroll', () => {
-      clearTimeout(window.scrollTimeout);
-      window.scrollTimeout = setTimeout(snapToSection, 200); // Дебаунс для плавной работы
-    });
+    function handleScroll() {
+      clearTimeout(customWindow.scrollTimeout);
+      customWindow.scrollTimeout = window.setTimeout(snapToSection, 200); // Дебаунс для плавной работы
+    }
 
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', snapToSection); // Пересчитываем при изменении размера окна
 
     // Начальная прокрутка при загрузке страницы
@@ -44,10 +50,11 @@ export default function Home() {
 
     // Очистка обработчиков событий при размонтировании компонента
     return () => {
-      window.removeEventListener('scroll', snapToSection);
+      window.removeEventListener('scroll', handleScroll); // Удаляем именно handleScroll
       window.removeEventListener('resize', snapToSection);
     };
   }, []);
+
   return (<>
 
     <MainSection />
