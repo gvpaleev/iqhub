@@ -159,7 +159,7 @@
   .item {
     display: grid;
     /* grid-template-columns: auto auto; */
-    grid-template-rows: 15vh auto;
+    grid-template-rows: 25vh auto;
     position: relative;
     padding-bottom: 15vh;
   }
@@ -174,13 +174,13 @@
 
   .header {
     padding-left: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 10vh;
     align-self: end;
     margin: 0px;
     /* padding-left: 100px; */
     display: inline-block;
     color: #6C4CDC;
-    width: 100vw;
+    width: 90%;
 
     font-family: "Antipasto Pro";
     font-size: 35px;
