@@ -233,7 +233,7 @@ export function SectionSeven() {
                 transition={{ duration: 0.5 }}      //
               >
                 <input type="text"
-                  placeholder="+79211234567"
+                  placeholder="+79315094422"
                 /> <button>записаться</button>
               </motion.div>
 

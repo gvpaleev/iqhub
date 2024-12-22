@@ -97,7 +97,7 @@ export function SectionFive() {
         <p className={styles.word5}
         >Оставьте телефон, ссылку на соц. сети или почту</p>
         <div className={styles.button}>
-          <input placeholder='+79211234567 или t.me/IQHub' /> <button>Отправить</button>
+          <input placeholder='+79315094422 или t.me/IQHub' /> <button>Отправить</button>
         </div>
       </div>
     </section>

@@ -53,10 +53,12 @@ export function MainSection() {
           />
           <div>
 
-            <motion.img
-              src="/instagram.svg"
-              alt="Sample Image"
-            />
+            <a href="https://www.instagram.com/mar.yanap?igsh=MTl1dTluNWh0cmg0cw%3D%3D&utm_source=qr">
+              <motion.img
+                src="/instagram.svg"
+                alt="Sample Image"
+              />
+            </a>
             <motion.img
               src="/telegram.svg"
               alt="Sample Image"
@@ -115,10 +117,12 @@ export function MainSection() {
       </nav>
       <div className={classNames(styles.hrefIcons)}
       >
-        <motion.img
-          src="/instagram.svg"
-          alt="Sample Image"
-        />
+        <a href="https://www.instagram.com/mar.yanap?igsh=MTl1dTluNWh0cmg0cw%3D%3D&utm_source=qr">
+          <motion.img
+            src="/instagram.svg"
+            alt="Sample Image1"
+          />
+        </a>
         <motion.img
           src="/telegram.svg"
           alt="Sample Image"
@@ -169,7 +173,7 @@ export function MainSection() {
             transition={{ duration: 0.5 }}      //
           >
             <input type="text"
-              placeholder={"+79211234567"}
+              placeholder={"+79315094422"}
             /> <button>записаться</button>
           </motion.div>
 

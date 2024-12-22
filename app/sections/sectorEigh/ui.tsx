@@ -96,10 +96,14 @@ export function SectionEight() {
           className={styles.contacts}
         >
           <h1>Контакты</h1>
-          <h4>тел. +7 921 123 45 67</h4>
-          <h4>почта IQHub@gmai.com</h4>
-          <div>          <motion.img
-            src='/8/instagram.svg' />
+          <h4>тел. +7 931 509‒44‒22</h4>
+          <h4>почта iq-hub@yandex.ru</h4>
+          <div>
+            <a href="https://www.instagram.com/mar.yanap?igsh=MTl1dTluNWh0cmg0cw%3D%3D&utm_source=qr">
+
+              <motion.img
+                src='/8/instagram.svg' />
+            </a>
             <motion.img
               src='/8/telegram.svg' />
             <motion.img
