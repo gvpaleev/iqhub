@@ -114,6 +114,7 @@
 
 
   .word5 {
+    text-align:center;
     display: inline-block;
     grid-area: word5;
     max-width: 724px;

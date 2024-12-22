@@ -63,10 +63,14 @@ export function MainSection() {
               src="/telegram.svg"
               alt="Sample Image"
             />
-            <motion.img
-              src="/vk.svg"
-              alt="Sample Image"
-            />
+            <a href="https://vk.com/iqhubonline">
+
+              <motion.img
+                src="/vk.svg"
+                alt="Sample Image"
+              />
+            </a>
+
             <motion.img
               src="/whatsapp.svg"
               alt="Sample Image"
@@ -127,10 +131,13 @@ export function MainSection() {
           src="/telegram.svg"
           alt="Sample Image"
         />
-        <motion.img
-          src="/vk.svg"
-          alt="Sample Image"
-        />
+        <a href="https://vk.com/iqhubonline">
+
+          <motion.img
+            src="/vk.svg"
+            alt="Sample Image"
+          />
+        </a>
         <motion.img
           src="/whatsapp.svg"
           alt="Sample Image"
