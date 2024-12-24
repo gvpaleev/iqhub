@@ -13,12 +13,10 @@
     margin: 0px;
     text-align: center;
     padding-bottom: 3%;
-    /* align-self: center; */
     font-family: "Antipasto Pro";
     font-size: 75px;
     font-style: normal;
     font-weight: 400;
-    /* padding-bottom: 56px; */
   }
 
   .bar {
@@ -98,39 +96,6 @@
     z-index: 1;
   }
 
-  /* .backgroundItemMenu::after { */
-  /*   left: -20px; */
-  /*   content: ""; */
-  /*   position: absolute; */
-  /*   bottom: 0; */
-  /*   height: 100%; */
-  /*   width: 100%; */
-  /*   background-image: url('/7/actionItemLeft.svg'); */
-  /*   background-size: contain; */
-  /*   background-repeat: no-repeat; */
-  /*   background-position: center; */
-  /*   z-index: -1; */
-  /*   transition: width 0.3s ease-in-out, left 0.3s ease-in-out; */
-  /**/
-  /* } */
-
-  /* .actionItemMenu::after { */
-  /*   content: ''; */
-  /*   display: block; */
-  /*   position: absolute; */
-  /*   top: 0; */
-  /*   /* left: 0; */
-  /*   width: 100%; */
-  /*   /* height: auto; */
-  /*   background-image: url('/7/actionItemMenu.svg'); */
-  /*   /* background-size: cover; */
-  /*   /* Растягиваем изображение по всему контейнеру */
-  /*   background-repeat: no-repeat; */
-  /*   background-position: center; */
-  /*   /* z-index: -1; */
-  /*   /* Убедитесь, что изображение находится позади содержимого */
-  /* } */
-
   .cardsBlock {
     border-radius: 30px;
     background: #FCDCD5;
@@ -174,10 +139,10 @@
   /**/
   .card {
     display: grid;
-    grid-template-rows: 83px 114px 19px 59px 36px 16px 97px;
+    grid-template-rows: auto auto auto auto;
     justify-content: center;
     justify-items: center;
-    align-items: end;
+    align-items: center;
   }
 
   .cardLR {
@@ -239,7 +204,7 @@
   .formForSend {
     /* position: absolute; */
     /* border: 1px solid #6C4CDC; */
-    align-self: end;
+    align-self: center;
     display: grid;
     grid-template-rows: min-content;
     grid-template-columns: min-content min-content;
@@ -257,6 +222,7 @@
   }
 
   .formForSend button {
+
     width: 137px;
     height: 40px;
     flex-shrink: 0;
@@ -298,26 +264,6 @@
     ;
   }
 
-  /**/
-  /* .blockCenter { */
-  /*   width: 350px; */
-  /*   height: 500px; */
-  /*   border-radius: 40px; */
-  /*   opacity: 0.8; */
-  /*   background: #E16B5E; */
-  /* } */
-  /**/
-  /* .block h1 { */
-  /*   display: inline-block; */
-  /*   color: #2C2640; */
-  /*   margin: 0px; */
-  /**/
-  /*   font-family: "Antipasto Pro"; */
-  /*   font-size: 24px; */
-  /*   font-style: normal; */
-  /*   font-weight: 400; */
-  /*   line-height: 100%; */
-  /* } */
 
   .card h2 {
     color: #2C2640;
@@ -333,7 +279,7 @@
     color: #2C2640;
     justify-self: center;
     text-align: center;
-    ;
+    width:80%;
     font-family: "Antipasto Pro";
     font-size: 24px;
     font-style: normal;
@@ -569,10 +515,12 @@
   .card {
     flex-shrink: 0;
     display: grid;
-    grid-template-rows: 7vh 7vh 3vh 6vh 10vh 10vh 8vh;
+    /* grid-template-rows: 7vh 7vh 3vh 6vh 10vh 10vh 8vh; */
+        grid-template-rows: auto auto auto auto;
+
     justify-content: center;
     justify-items: center;
-    align-items: end;
+    align-items: center;
     scroll-snap-align: center;
   }
 
@@ -586,6 +534,8 @@
   }
 
   .cardLR>button {
+
+            
     color: #FFF;
     width: 208px;
     height: 54px;
@@ -730,9 +680,9 @@
     color: #2C2640;
     justify-self: center;
     text-align: center;
-    ;
+    width:80%;
     font-family: "Antipasto Pro";
-    font-size: 12px;
+    /* font-size: 12px; */
     font-style: normal;
     font-weight: 300;
     margin: 0px;
@@ -766,7 +716,7 @@
     text-align: center;
     ;
     font-family: "Antipasto Pro";
-    font-size: 12px;
+    /* font-size: 12px; */
     font-style: normal;
     font-weight: 300;
     margin: 0px;
