@@ -19,6 +19,7 @@
       "word5 word5"
       "input input";
     border-radius: 40px;
+    column-gap: 20px;
     align-content: center;
     justify-content: center;
     align-items: end;

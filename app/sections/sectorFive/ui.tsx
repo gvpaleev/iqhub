@@ -80,7 +80,7 @@ export function SectionFive() {
           alt="Sample Image"
         />
         <h1 className={styles.word1}
-        >Скидка </h1>
+        >Скидка</h1>
         <span className={styles.word2}
         >
           30%
