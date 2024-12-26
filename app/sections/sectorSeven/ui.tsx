@@ -8,8 +8,8 @@ import { sendMessage } from '@/app/helpers/tg';
 
 
 export function SectionSeven() {
-  const inputRef = useRef(null);
 
+  const inputRef = useRef<HTMLInputElement>(null);
   const data = [{
     'header': "Подготовка к школе",
     'cards': [
@@ -242,10 +242,10 @@ export function SectionSeven() {
                 /> <button
                   onClick={
                     () => {
-                      sendMessage(inputRef.current.value);
-                      inputRef.current.value = 'Спасибо.'
+                      sendMessage(inputRef!.current!.value);
+                      inputRef!.current!.value = 'Спасибо.'
                       setTimeout(() => {
-                        inputRef.current.value = ''
+                        inputRef!.current!.value = ''
                       }, 2000)
                     }
                   }

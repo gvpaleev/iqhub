@@ -15,7 +15,7 @@ export function MainSection() {
   };
 
   // let isMobil = +(window.innerWidth) < 768;
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const controlH2 = useAnimation();
 
@@ -185,10 +185,10 @@ export function MainSection() {
             <input ref={inputRef} type="text"
               placeholder={"+79315094422"}
             /> <button onClick={() => {
-              sendMessage(inputRef.current.value);
-              inputRef.current.value = 'Ожидайте звонка.'
+              sendMessage(inputRef!.current!.value);
+              inputRef!.current!.value = 'Ожидайте звонка.'
               setTimeout(() => {
-                inputRef.current.value = ''
+                inputRef!.current!.value = ''
 
                 setShowButton(true)
               }, 2000)

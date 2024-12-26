@@ -12,7 +12,7 @@ export function SectionFive() {
   const ref3 = useRef<HTMLImageElement>(null);
   const ref4 = useRef<HTMLImageElement>(null);
 
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const controlBrain1 = useAnimation();
   const controlBrain2 = useAnimation();
@@ -104,10 +104,10 @@ export function SectionFive() {
             placeholder='+79315094422 или t.me/IQHub' />
           <button onClick={
             () => {
-              sendMessage(inputRef.current.value);
-              inputRef.current.value = 'Ожидайте звонка.'
+              sendMessage(inputRef!.current!.value);
+              inputRef!.current!.value = 'Ожидайте звонка.'
               setTimeout(() => {
-                inputRef.current.value = ''
+                inputRef!.current!.value = ''
               }, 2000)
             }
           }

@@ -7,8 +7,8 @@ import { useRef } from 'react';
 
 export function SectionThree() {
 
-  const inputRef = useRef(null);
 
+  const inputRef = useRef<HTMLInputElement>(null);
 
   return (
     <section className={styles.item}>
@@ -53,11 +53,11 @@ export function SectionThree() {
           />
           <button onClick={() => {
             sendMessage(
-              inputRef.current.value
+              inputRef!.current!.value
             );
-            inputRef.current.value = 'Ожидайте звонка.'
+            inputRef!.current!.value = 'Ожидайте звонка.'
             setTimeout(() => {
-              inputRef.current.value = ''
+              inputRef!.current!.value = ''
 
             }, 2000)
           }}>Отправить</button>
