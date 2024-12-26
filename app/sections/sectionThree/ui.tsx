@@ -1,9 +1,13 @@
 'use client'
+import { sendMessage } from '@/app/helpers/tg';
 import styles from './sectionTrhee.module.css'
 
 import { motion, useAnimation } from 'framer-motion';
+import { useRef } from 'react';
 
 export function SectionThree() {
+
+  const inputRef = useRef(null);
 
 
   return (
@@ -44,9 +48,19 @@ export function SectionThree() {
           className={styles.button}
         >
           <input
+            ref={inputRef}
             placeholder="+79315094422"
           />
-          <button>Отправить</button>
+          <button onClick={() => {
+            sendMessage(
+              inputRef.current.value
+            );
+            inputRef.current.value = 'Ожидайте звонка.'
+            setTimeout(() => {
+              inputRef.current.value = ''
+
+            }, 2000)
+          }}>Отправить</button>
         </div>
       </div>
     </section>

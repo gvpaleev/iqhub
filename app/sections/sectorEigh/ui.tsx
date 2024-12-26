@@ -104,10 +104,13 @@ export function SectionEight() {
               <motion.img
                 src='/8/instagram.svg' />
             </a>
-            <motion.img
-              src='/8/telegram.svg' />
-            <motion.img
-              src='/8/vk.svg' />
+            <a href="https://t.me/Maranap502">
+              <motion.img
+                src='/8/telegram.svg' /></a>
+            <a href="https://vk.com/iqhubonline">
+
+              <motion.img
+                src='/8/vk.svg' /></a>
             <motion.img
               src='/8/whatsapp.svg' />
           </div>

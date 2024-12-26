@@ -3,8 +3,9 @@ import classNames from "classnames";
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 
 import styles from './mainSection.module.css'
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Stamp } from "./components/stamp";
+import { sendMessage } from "@/app/helpers/tg";
 
 export function MainSection() {
   const [showInput, setShowButton] = useState(true);
@@ -14,7 +15,7 @@ export function MainSection() {
   };
 
   // let isMobil = +(window.innerWidth) < 768;
-
+  const inputRef = useRef(null);
 
   const controlH2 = useAnimation();
 
@@ -59,10 +60,11 @@ export function MainSection() {
                 alt="Sample Image"
               />
             </a>
-            <motion.img
-              src="/telegram.svg"
-              alt="Sample Image"
-            />
+            <a href="https://t.me/Maranap502">
+              <motion.img
+                src="/telegram.svg"
+                alt="Sample Image"
+              /></a>
             <a href="https://vk.com/iqhubonline">
 
               <motion.img
@@ -127,10 +129,11 @@ export function MainSection() {
             alt="Sample Image1"
           />
         </a>
-        <motion.img
-          src="/telegram.svg"
-          alt="Sample Image"
-        />
+        <a href="https://t.me/Maranap502">
+          <motion.img
+            src="/telegram.svg"
+            alt="Sample Image"
+          /></a>
         <a href="https://vk.com/iqhubonline">
 
           <motion.img
@@ -179,9 +182,17 @@ export function MainSection() {
             exit={{ opacity: 0, scale: 0.8 }}   // Анимация исчезновения
             transition={{ duration: 0.5 }}      //
           >
-            <input type="text"
+            <input ref={inputRef} type="text"
               placeholder={"+79315094422"}
-            /> <button>записаться</button>
+            /> <button onClick={() => {
+              sendMessage(inputRef.current.value);
+              inputRef.current.value = 'Ожидайте звонка.'
+              setTimeout(() => {
+                inputRef.current.value = ''
+
+                setShowButton(true)
+              }, 2000)
+            }} >записаться</button>
           </motion.div>
 
 

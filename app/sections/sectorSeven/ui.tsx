@@ -4,9 +4,12 @@ import { motion, useAnimation } from 'framer-motion';
 import { Cards } from './componetnts/cards/ui'
 import styles from './sectionSeven.module.css'
 import classNames from 'classnames'
+import { sendMessage } from '@/app/helpers/tg';
 
 
 export function SectionSeven() {
+  const inputRef = useRef(null);
+
   const data = [{
     'header': "Подготовка к школе",
     'cards': [
@@ -234,12 +237,24 @@ export function SectionSeven() {
                 transition={{ duration: 0.5 }}      //
               >
                 <input type="text"
+                  ref={inputRef}
                   placeholder="+79315094422"
-                /> <button>записаться</button>
+                /> <button
+                  onClick={
+                    () => {
+                      sendMessage(inputRef.current.value);
+                      inputRef.current.value = 'Спасибо.'
+                      setTimeout(() => {
+                        inputRef.current.value = ''
+                      }, 2000)
+                    }
+                  }
+
+                >записаться</button>
               </motion.div>
 
             ) : (
-              <button>заказать</button>
+              <button onClick={() => { window.scrollTo(0, 0); }} >заказать</button>
             )}
           </motion.div>)
         })}

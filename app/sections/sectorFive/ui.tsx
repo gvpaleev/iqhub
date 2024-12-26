@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './sectionFive.module.css'
 
 import { motion, useAnimation } from 'framer-motion';
+import { sendMessage } from '@/app/helpers/tg';
 
 
 export function SectionFive() {
@@ -10,6 +11,8 @@ export function SectionFive() {
   const ref2 = useRef<HTMLImageElement>(null);
   const ref3 = useRef<HTMLImageElement>(null);
   const ref4 = useRef<HTMLImageElement>(null);
+
+  const inputRef = useRef(null);
 
   const controlBrain1 = useAnimation();
   const controlBrain2 = useAnimation();
@@ -97,7 +100,18 @@ export function SectionFive() {
         <p className={styles.word5}
         >Оставьте телефон, ссылку на соц. сети или почту</p>
         <div className={styles.button}>
-          <input placeholder='+79315094422 или t.me/IQHub' /> <button>Отправить</button>
+          <input ref={inputRef}
+            placeholder='+79315094422 или t.me/IQHub' />
+          <button onClick={
+            () => {
+              sendMessage(inputRef.current.value);
+              inputRef.current.value = 'Ожидайте звонка.'
+              setTimeout(() => {
+                inputRef.current.value = ''
+              }, 2000)
+            }
+          }
+          >Отправить</button>
         </div>
       </div>
     </section>
