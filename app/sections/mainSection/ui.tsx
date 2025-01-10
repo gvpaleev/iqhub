@@ -60,7 +60,7 @@ export function MainSection() {
                 alt="Sample Image"
               />
             </a>
-            <a href="https://t.me/Maranap502">
+            <a href="https://t.me/IQhub_school">
               <motion.img
                 src="/telegram.svg"
                 alt="Sample Image"
@@ -72,11 +72,11 @@ export function MainSection() {
                 alt="Sample Image"
               />
             </a>
-
-            <motion.img
-              src="/whatsapp.svg"
-              alt="Sample Image"
-            />
+            <a href="https://wa.me/message/K6MTPZDOM6THJ1">
+              <motion.img
+                src="/whatsapp.svg"
+                alt="Sample Image"
+              /></a>
           </div>
         </motion.div>
         )}</AnimatePresence>
@@ -129,7 +129,7 @@ export function MainSection() {
             alt="Sample Image1"
           />
         </a>
-        <a href="https://t.me/Maranap502">
+        <a href="https://t.me/IQhub_school">
           <motion.img
             src="/telegram.svg"
             alt="Sample Image"
@@ -141,10 +141,11 @@ export function MainSection() {
             alt="Sample Image"
           />
         </a>
-        <motion.img
-          src="/whatsapp.svg"
-          alt="Sample Image"
-        />
+        <a href="https://wa.me/message/K6MTPZDOM6THJ1">
+          <motion.img
+            src="/whatsapp.svg"
+            alt="Sample Image"
+          /></a>
       </div>
 
       <motion.h2

@@ -25,7 +25,7 @@ export function SectionEight() {
     },
     {
       'title': "Можно ли получить запись занятия?",
-      "text": "Да, вы можете получить запись занятия для повторения материала или в случае, если не смогли присутствовать на уроке. Записи хранятся в вашем личном кабинете."
+      "text": "Да, вы можете получить запись занятия для повторения материала или в случае, если не смогли присутствовать на уроке."
     }
   ]
 
@@ -104,15 +104,17 @@ export function SectionEight() {
               <motion.img
                 src='/8/instagram.svg' />
             </a>
-            <a href="https://t.me/Maranap502">
+            <a href="https://t.me/IQhub_school">
               <motion.img
                 src='/8/telegram.svg' /></a>
             <a href="https://vk.com/iqhubonline">
 
               <motion.img
                 src='/8/vk.svg' /></a>
-            <motion.img
-              src='/8/whatsapp.svg' />
+            <a href="https://wa.me/message/K6MTPZDOM6THJ1">
+              <motion.img
+                src='/8/whatsapp.svg' />
+            </a>
           </div>
 
         </div>
